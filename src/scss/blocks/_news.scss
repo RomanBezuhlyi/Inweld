@@ -1,0 +1,108 @@
+@use '../abstracts' as *;
+
+.news {
+	padding: 120px 78px;
+	&__top {
+		@include flex(row, space-between, center);
+		margin-bottom: 24px;
+	}
+
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal);
+		letter-spacing: -0.312px;
+	}
+
+	&__navigation {
+		@include flex(row, center, center, 12px);
+	}
+
+	&__pagination-prev {
+		@include center;
+		@include box(56px, 56px, 56px);
+		border: 1px solid $text;
+		background: $accent;
+	}
+
+	&__pagination-next {
+		@include center;
+		@include box(56px, 56px, 56px);
+		border: 1px solid $text;
+		background: $accent;
+	}
+
+	.swiper-button-disabled {
+		background: $white;
+	}
+
+	&__swiper {
+		width: calc(100% + 102px);
+		margin-right: -102px;
+		@media (min-width: 1920px) {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	&__item {
+		@include flex(column, flex-start, flex-start);
+		padding: 16px;
+		border-radius: 12px;
+		border: 1px solid #eef3f8;
+		background: $white;
+	}
+
+	&__item-img {
+		@include box(100%, 220px, 8px);
+		overflow: hidden;
+		margin-bottom: 16px;
+	}
+
+	&__item-name {
+		color: $text;
+		@include text-style(20px, 400, normal);
+		margin-bottom: 8px;
+	}
+
+	&__item-desc {
+		color: #9599aa;
+		@include text-style(14px, 400, normal);
+		letter-spacing: -0.312px;
+		margin-bottom: 8px;
+	}
+
+	&__item-text {
+		color: $text;
+		@include text-style(16px, 300, normal);
+		margin-bottom: 24px;
+	}
+
+	&__item-bottom {
+		width: 100%;
+		@include flex(row, flex-start, center, 8px);
+	}
+
+	&__item-more {
+		@include center;
+		@include box(50%, 56px, 8px);
+		padding: 12px 16px;
+		color: $text;
+		@include text-style(16px, 700, normal);
+		border: 2px solid $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__item-price {
+		@include center;
+		@include box(50%, 56px, 8px);
+		padding: 12px 16px;
+		@include text-style(16px, 700, normal);
+		color: $text;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+}

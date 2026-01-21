@@ -5,4 +5,11 @@
 @use './base/container' as *;
 
 @use './blocks/header' as *;
+@use './blocks/hero' as *;
+@use './blocks/categories' as *;
+@use './blocks/why-us' as *;
+@use './blocks/news' as *;
+@use './blocks/partners' as *;
+@use './blocks/reviews' as *;
+@use './blocks/updates' as *;
 @use './blocks/footer' as *;

@@ -1,0 +1,156 @@
+@use '../abstracts' as *;
+
+.header {
+	@include flex(row, space-between, center);
+	padding-top: 24px;
+	padding-bottom: 24px;
+
+	&__left {
+		@include flex(row, flex-start, center, 16px);
+	}
+
+	&__logo {
+		@include center;
+	}
+
+	&__btn-catalog {
+		@include flex(row, center, center, 8px);
+		padding: 12px 16px;
+		color: #171e2f;
+		@include text-style(14px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__nav {
+		@include flex(row, center, center, 12px);
+	}
+
+	&__nav-item {
+		@include center;
+		padding: 10px 10px 9px 10px;
+		color: #171e2f;
+		@include text-style(14px, 400, normal);
+		letter-spacing: -0.312px;
+		border-bottom: 1px solid transparent;
+		&.active {
+			border-color: $accent;
+			span {
+				text-shadow: 0.3px 0 0 currentColor;
+			}
+		}
+		span {
+			font-weight: 400;
+			@include transition;
+		}
+		&:hover {
+			border-color: $accent;
+			span {
+				text-shadow: 0.3px 0 0 currentColor;
+			}
+		}
+	}
+
+	&__center {
+		@include center;
+	}
+
+	&__search {
+		position: relative;
+		@include center;
+		max-width: 250px;
+		@include box(100%, 48px);
+	}
+
+	&__search-icon {
+		position: absolute;
+		left: 16px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__search-input {
+		@include box(100%);
+		@include flex(row, flex-start, center);
+		padding: 0 16px 0 40px;
+		color: #171e2f;
+		@include text-style(14px, 400, normal);
+		border-radius: 14px;
+		border: 1px solid #f2f2f2;
+		background: #f2f2f2;
+		&::placeholder {
+			opacity: 1;
+			color: $grey;
+		}
+	}
+
+	&__right {
+		@include flex(row, flex-end, center, 16px);
+	}
+
+	&__btn-cart {
+		position: relative;
+		@include center;
+		@include box(40px);
+	}
+
+	&__btn-cart--calc {
+		position: absolute;
+		top: -4px;
+		right: -4px;
+		@include center;
+		@include box(20px);
+		color: $text;
+		@include text-style(11px, 400, 16.5px, center);
+		letter-spacing: 0.064px;
+
+		border-radius: 16777200px;
+		background: $accent;
+	}
+
+	&__btn-cart--icon {
+		@include box(20px);
+	}
+
+	&__btn-user {
+		@include center;
+		@include box(40px);
+	}
+
+	&__btn-user--icon {
+		@include box(20px);
+	}
+
+	&__switch-lang {
+		@include flex(row, center, center, 8px);
+	}
+
+	&__switch-lang-btn {
+		position: relative;
+		@include center;
+		color: #9599aa;
+		@include text-style(14px, 400, 21px, center);
+		letter-spacing: -0.15px;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			display: block;
+			@include box(100%, 2px);
+			background: transparent;
+			@include transition;
+		}
+		&:hover {
+			color: $text;
+			transform: translateY(-2px);
+			&::after {
+				background: $accent;
+			}
+		}
+	}
+}

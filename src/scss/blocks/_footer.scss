@@ -1,0 +1,80 @@
+@use '../abstracts' as *;
+
+.footer-wrap {
+	padding: 16px 36px;
+	background: $bg;
+}
+.footer {
+	@include flex(column, flex-start, flex-start, 24px);
+	&__top {
+		width: 100%;
+		@include flex(row, space-between, center);
+		padding-bottom: 16px;
+		border-bottom: 1px solid $accent;
+	}
+
+	&__logo {
+		@include center;
+	}
+
+	&__social {
+		@include flex(row, flex-end, center, 16px);
+	}
+
+	&__social-label {
+		color: $grey;
+		@include text-style(14px, 400, 24px);
+		letter-spacing: 0.2px;
+	}
+
+	&__social-list {
+		@include flex(row, flex-end, center, 8px);
+	}
+
+	&__social-item {
+		@include center;
+		@include box(40px, 40px, 100%);
+		background: $white;
+	}
+
+	&__body {
+		width: 100%;
+		@include flex(row, space-between, flex-start);
+	}
+
+	&__body-row {
+		@include flex(row, flex-start, flex-start, 70px);
+	}
+
+	&__body-col {
+		@include flex(column, flex-start, flex-start, 24px);
+	}
+
+	&__body-list {
+		@include flex(column, flex-start, flex-start, 10px);
+	}
+
+	&__body-item {
+		color: $text;
+		@include text-style(14px, 700, 24px);
+		letter-spacing: 0.2px;
+		a {
+			color: $grey;
+			@include text-style(14px, 400, 24px);
+			letter-spacing: 0.2px;
+		}
+	}
+
+	&__bottom {
+		width: 100%;
+		border-top: 1px solid $accent;
+		padding: 16px 0;
+		@include center;
+	}
+
+	&__bottom-desc {
+		color: $grey;
+		@include text-style(14px, 400, 24px);
+		letter-spacing: 0.2px;
+	}
+}

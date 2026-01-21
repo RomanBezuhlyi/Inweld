@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.hero-wrap {
+	@include center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include box(100%, 465px);
+}
+.hero {
+	position: relative;
+	@include flex(column, center, center);
+	z-index: 1;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: block;
+		@include box(631px, 299px);
+		border-radius: 631px;
+		background: rgba(0, 0, 0, 0.6);
+		filter: blur(60px);
+		z-index: -1;
+	}
+	&__title {
+		color: $white;
+		@include text-style(48px, 500, normal);
+		text-transform: uppercase;
+		margin-bottom: 12px;
+	}
+
+	&__text {
+		color: $white;
+		@include text-style(15px, 500, normal, center);
+		letter-spacing: -0.312px;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+	}
+
+	&__btn {
+		@include center;
+		padding: 18px 32px;
+		color: $text;
+		@include text-style(16px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+}

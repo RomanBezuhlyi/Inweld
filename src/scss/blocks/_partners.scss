@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.partners-wrap {
+	padding: 40px 78px;
+	background: $bg;
+}
+.partners {
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal, center);
+		letter-spacing: -0.312px;
+		margin-bottom: 32px;
+	}
+
+	&__list {
+		@include flex(row, space-between, center);
+	}
+}

@@ -16,4 +16,8 @@ body {
 
 button {
 	cursor: pointer;
+	@include transition;
+}
+a {
+	@include transition;
 }
