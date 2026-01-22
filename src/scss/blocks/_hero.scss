@@ -1,10 +1,18 @@
 @use '../abstracts' as *;
 
 .hero-wrap {
+	position: relative;
 	@include center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	@include box(100%, 465px);
+	overflow: hidden;
+	@media (max-width: 1024px) {
+		height: 320px;
+	}
+	@media (max-width: 767px) {
+		height: 280px;
+	}
 }
 .hero {
 	position: relative;
@@ -22,12 +30,21 @@
 		background: rgba(0, 0, 0, 0.6);
 		filter: blur(60px);
 		z-index: -1;
+		@media (max-width: 1024px) {
+			height: 211px;
+		}
+		@media (max-width: 767px) {
+			width: 354px;
+		}
 	}
 	&__title {
 		color: $white;
 		@include text-style(48px, 500, normal);
 		text-transform: uppercase;
 		margin-bottom: 12px;
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, normal, center);
+		}
 	}
 
 	&__text {

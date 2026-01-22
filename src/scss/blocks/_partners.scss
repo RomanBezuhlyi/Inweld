@@ -3,6 +3,9 @@
 .partners-wrap {
 	padding: 40px 78px;
 	background: $bg;
+	@media (max-width: 1024px) {
+		padding: 40px 20px;
+	}
 }
 .partners {
 	&__title {
@@ -10,9 +13,24 @@
 		@include text-style(40px, 500, normal, center);
 		letter-spacing: -0.312px;
 		margin-bottom: 32px;
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, normal, center);
+		}
 	}
 
 	&__list {
 		@include flex(row, space-between, center);
+		@media (max-width: 1024px) {
+			gap: 40px;
+		}
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		@media (max-width: 767px) {
+			width: 43%;
+		}
 	}
 }

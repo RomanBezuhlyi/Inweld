@@ -3,13 +3,23 @@
 .why-us-wrap {
 	padding: 56px 0;
 	background: $bg;
+	@media (max-width: 1024px) {
+		padding: 56px 4px;
+	}
 }
 
 .why-us {
 	@include flex(row, center, flex-start, 24px);
 	width: 100%;
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		gap: 40px;
+	}
 	&__left {
 		width: 501px;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
 	}
 
 	&__title {
@@ -25,6 +35,9 @@
 
 	&__right {
 		width: 501px;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
 	}
 
 	&__list {

@@ -1,16 +1,36 @@
 @use '../abstracts' as *;
 
 .header {
+	position: relative;
 	@include flex(row, space-between, center);
 	padding-top: 24px;
 	padding-bottom: 24px;
+	border-bottom: 1px solid #eef3f8;
+	z-index: 111;
+	@media (max-width: 1024px) {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
 
 	&__left {
 		@include flex(row, flex-start, center, 16px);
+		@media (max-width: 1024px) {
+			gap: 8px;
+		}
 	}
 
 	&__logo {
 		@include center;
+		@media (max-width: 1024px) {
+			width: 95px;
+			height: 56px;
+			@include box(95px, 56px);
+			aspect-ratio: 95/56;
+		}
+		@media (max-width: 767px) {
+			@include box(81px, 48px);
+			aspect-ratio: 27/16;
+		}
 	}
 
 	&__btn-catalog {
@@ -28,6 +48,9 @@
 
 	&__nav {
 		@include flex(row, center, center, 12px);
+		@media (max-width: 1024px) {
+			display: none;
+		}
 	}
 
 	&__nav-item {
@@ -64,6 +87,12 @@
 		@include center;
 		max-width: 250px;
 		@include box(100%, 48px);
+		@media (max-width: 1024px) {
+			width: 250px;
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 
 	&__search-icon {
@@ -90,6 +119,9 @@
 
 	&__right {
 		@include flex(row, flex-end, center, 16px);
+		@media (max-width: 767px) {
+			gap: 8px;
+		}
 	}
 
 	&__btn-cart {
@@ -127,6 +159,9 @@
 
 	&__switch-lang {
 		@include flex(row, center, center, 8px);
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 
 	&__switch-lang-btn {
@@ -152,5 +187,276 @@
 				background: $accent;
 			}
 		}
+		&.active {
+			color: $text;
+			transform: translateY(-2px);
+			&::after {
+				background: $accent;
+			}
+		}
+	}
+
+	&__switch-burger {
+		display: none;
+		@media (max-width: 1024px) {
+			@include center;
+		}
+	}
+}
+
+.catalog-overlay {
+	position: absolute;
+	left: 0;
+	top: 122px;
+	width: 100%;
+	height: calc(100vh - 122px);
+	background: rgba(26, 26, 26, 0.6);
+	backdrop-filter: blur(6px);
+	z-index: 2;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-10px);
+	@include transition;
+	@media (max-width: 1024px) {
+		top: 80px;
+		height: calc(100vh - 80px);
+	}
+	&.open-catalog {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateY(0);
+	}
+}
+.catalog-wrap {
+	padding: 45px 102px;
+	border-bottom: 1px solid $accent;
+	background: $white;
+	@media (max-width: 1024px) {
+		padding: 24px 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 16px;
+	}
+}
+.catalog {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	row-gap: 48px;
+	@media (max-width: 1024px) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	@media (max-width: 767px) {
+		display: none;
+	}
+	&__category {
+		@include flex(row, flex-start, flex-start, 16px);
+	}
+
+	&__category-img {
+		@include box(80px, 80px, 8px);
+		object-fit: cover;
+		border: 1px solid #f2f2f2;
+		box-shadow: 0 0 4px 0 rgba(174, 175, 178, 0.25);
+	}
+
+	&__category-list {
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__category-item {
+		color: $text;
+		@include text-style(16px, 700, normal);
+		a {
+			color: $grey;
+			@include text-style(14px, 400, normal);
+		}
+	}
+
+	&-close {
+		display: none;
+		@media (max-width: 1024px) {
+			margin: auto;
+			margin-top: 24px;
+			@include center;
+		}
+	}
+}
+
+.catalog-mobile {
+	display: none;
+	@media (max-width: 767px) {
+		@include flex(column, flex-start, flex-start, 24px);
+	}
+	&__item {
+		width: 100%;
+	}
+
+	&__item.open-item {
+		.catalog-mobile__item-body {
+			opacity: 1;
+			max-height: 400px;
+		}
+		.catalog-mobile__item-top > p {
+			text-shadow: 0.3px 0 0 currentColor;
+		}
+		.catalog-mobile__item-top > img {
+			transform: rotateX(180deg);
+		}
+	}
+
+	&__item-top {
+		width: 100%;
+		@include flex(row, space-between, center);
+		p {
+			color: $text;
+			@include text-style(16px, 400, normal);
+			@include transition;
+		}
+		img {
+			@include transition;
+		}
+	}
+
+	&__item-body {
+		overflow: hidden;
+		opacity: 0;
+		max-height: 0;
+		@include transition;
+	}
+
+	&__item-list {
+		margin-top: 15px;
+		@include flex(column, flex-start, flex-start, 24px);
+	}
+
+	&__item-item {
+		color: $grey;
+		@include text-style(14px, 400, normal);
+	}
+}
+
+.mobile-menu-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include box(100%);
+	background: rgba(26, 26, 26, 0.6);
+	backdrop-filter: blur(6px);
+	z-index: 1111;
+	opacity: 0;
+	pointer-events: none;
+	@include transition;
+
+	&.open-menu {
+		opacity: 1;
+		pointer-events: all;
+		.mobile-menu-wrap {
+			left: 0;
+		}
+	}
+}
+.mobile-menu-wrap {
+	@include box(372px, 100%);
+	padding: 12px 0 439px 0;
+	background: $white;
+	position: relative;
+	left: -400px;
+	@include transition;
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}
+.mobile-menu {
+	@include flex(column, flex-start, flex-start, 16px);
+
+	&__top {
+		width: 100%;
+		@include flex(row, space-between, center);
+	}
+
+	&__logo {
+		@include box(95px, 56px);
+		aspect-ratio: 95/56;
+	}
+
+	&__top-right {
+		@include flex(row, flex-end, center, 16px);
+	}
+
+	&__switch-lang {
+		@include flex(row, center, center, 8px);
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__switch-lang-btn {
+		position: relative;
+		@include center;
+		color: #9599aa;
+		@include text-style(14px, 400, 21px, center);
+		letter-spacing: -0.15px;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			display: block;
+			@include box(100%, 2px);
+			background: transparent;
+			@include transition;
+		}
+		&:hover {
+			color: $text;
+			transform: translateY(-2px);
+			&::after {
+				background: $accent;
+			}
+		}
+		&.active {
+			color: $text;
+			transform: translateY(-2px);
+			&::after {
+				background: $accent;
+			}
+		}
+	}
+	&__close {
+		@include center;
+	}
+
+	&__btn-catalog {
+		@include flex(row, center, center, 8px);
+		padding: 12px 16px;
+		color: $text;
+		width: 100%;
+		@include text-style(14, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 20px);
+	}
+
+	&__nav-item {
+		@include flex(flex, center, center, 10px);
+		padding: 10px;
+		color: $text;
+		@include text-style(14px, 400, normal);
+		letter-spacing: -0.312px;
+	}
+
+	&__nav-line {
+		display: block;
+		@include box(100%, 3px);
+		background-color: $accent;
 	}
 }

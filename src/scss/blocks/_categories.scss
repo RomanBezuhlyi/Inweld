@@ -1,7 +1,13 @@
 @use '../abstracts' as *;
 
 .categories {
-	padding: 80px 80px 120px 80px;
+	padding: 80px 102px 120px 102px;
+	@media (max-width: 1024px) {
+		padding: 48px 20px 120px 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 48px 20px 80px 20px;
+	}
 
 	&__top {
 		@include flex(row, flex-start, center, 24px);
@@ -11,6 +17,9 @@
 	&__title {
 		color: $text;
 		@include text-style(40px, 500, normal);
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, normal);
+		}
 	}
 
 	&__line {
@@ -23,6 +32,14 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 24px;
+		@media (max-width: 1024px) {
+			row-gap: 40px;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 8px;
+			row-gap: 24px;
+		}
 	}
 
 	&__item {
@@ -47,11 +64,18 @@
 		object-fit: cover;
 		border-radius: 8px;
 		box-shadow: 0 0 4px 0 rgba(174, 175, 178, 0.25);
+		@media (max-width: 1024px) {
+			width: 164px;
+			height: 156px;
+		}
 	}
 
 	&__item-name {
 		color: $text;
 		@include text-style(18px, 700, normal, center);
 		@include transition;
+		@media (max-width: 767px) {
+			@include text-style(16px, 700, normal, center);
+		}
 	}
 }

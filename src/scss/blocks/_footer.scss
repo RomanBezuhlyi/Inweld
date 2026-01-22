@@ -3,9 +3,15 @@
 .footer-wrap {
 	padding: 16px 36px;
 	background: $bg;
+	@media (max-width: 1024px) {
+		padding: 16px 20px;
+	}
 }
 .footer {
 	@include flex(column, flex-start, flex-start, 24px);
+	@media (max-width: 767px) {
+		display: none;
+	}
 	&__top {
 		width: 100%;
 		@include flex(row, space-between, center);
@@ -38,16 +44,25 @@
 	}
 
 	&__body {
+		position: relative;
 		width: 100%;
 		@include flex(row, space-between, flex-start);
 	}
 
 	&__body-row {
 		@include flex(row, flex-start, flex-start, 70px);
+		@media (max-width: 1024px) {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			gap: 32px;
+		}
 	}
 
 	&__body-col {
 		@include flex(column, flex-start, flex-start, 24px);
+		@media (max-width: 1024px) {
+			width: 45%;
+		}
 	}
 
 	&__body-list {
@@ -65,6 +80,16 @@
 		}
 	}
 
+	&__body-img {
+		@media (max-width: 1024px) {
+			position: absolute;
+			right: 200px;
+			bottom: 0;
+			width: 160px;
+			height: 273px;
+		}
+	}
+
 	&__bottom {
 		width: 100%;
 		border-top: 1px solid $accent;
@@ -76,5 +101,109 @@
 		color: $grey;
 		@include text-style(14px, 400, 24px);
 		letter-spacing: 0.2px;
+	}
+}
+
+.footer-mobile {
+	display: none;
+	@media (max-width: 767px) {
+		@include flex(column, center, center, 24px);
+	}
+	&__top {
+		width: 100%;
+		@include center;
+		padding-bottom: 16px;
+		border-bottom: 1px solid $accent;
+	}
+
+	&__logo {
+		@include center;
+	}
+
+	&__body {
+		@include flex(column, flex-start, flex-start, 16px);
+	}
+
+	&__item {
+		width: 100%;
+	}
+
+	&__item.open {
+		.footer-mobile__item-bottom {
+			max-height: 400px;
+		}
+		.footer-mobile__item-top > img {
+			transform: rotate(45deg);
+		}
+	}
+
+	&__item-top {
+		width: 100%;
+		@include flex(row, space-between, center);
+		p {
+			color: $text;
+			@include text-style(14px, 400, 24px);
+			letter-spacing: 0.2px;
+		}
+		img {
+			@include transition;
+		}
+	}
+
+	&__item-bottom {
+		overflow: hidden;
+		max-height: 0;
+		@include transition;
+	}
+
+	&__item-list {
+		margin-top: 10px;
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__item-item {
+		color: $grey;
+		@include text-style(14px, 400, 24px);
+	}
+
+	&__bottom {
+		width: 100%;
+		@include flex(row, space-between, flex-start);
+	}
+
+	&__socials {
+		@include flex(column, flex-start, flex-start, 16px);
+	}
+
+	&__socials-label {
+		color: $grey;
+		@include text-style(14px, 400, 24px);
+		letter-spacing: 0.2px;
+	}
+
+	&__socials-list {
+		@include flex(row, flex-start, flex-start, 8px);
+	}
+
+	&__socials-item {
+		@include center;
+		@include box(40px, 40px, 40px);
+		background: $white;
+	}
+
+	&__img {
+		@include box(86px, 146px);
+	}
+
+	&__copyright {
+		@include center;
+		width: 100%;
+		border-top: 1px solid $accent;
+		padding-top: 16px;
+		p {
+			color: $grey;
+			@include text-style(14px, 400, 24px);
+			letter-spacing: 0.2px;
+		}
 	}
 }

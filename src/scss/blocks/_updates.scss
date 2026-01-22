@@ -5,14 +5,35 @@
 	@include flex(row, flex-start, center, 24px);
 	background: $bg;
 	margin-bottom: 120px;
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		gap: 0;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 80px;
+	}
 	&__left {
 		width: 50%;
 		object-fit: cover;
+		@media (max-width: 1024px) {
+			@include box(100%, 465px);
+			object-fit: cover;
+		}
+		@media (max-width: 767px) {
+			height: 200px;
+		}
 	}
 
 	&__right {
 		max-width: 600px;
 		width: 100%;
+		@media (max-width: 1024px) {
+			max-width: 100%;
+			padding: 24px;
+		}
+		@media (max-width: 767px) {
+			padding: 16px;
+		}
 	}
 
 	&__title {
@@ -20,12 +41,18 @@
 		@include text-style(40px, 500, normal);
 		letter-spacing: -0.312px;
 		margin-bottom: 16px;
+		@media (max-width: 767px) {
+			font-size: 32px;
+		}
 	}
 
 	&__text {
 		color: $text;
 		@include text-style(20px, 300, normal);
 		margin-bottom: 32px;
+		@media (max-width: 767px) {
+			font-size: 16px;
+		}
 	}
 
 	&__form {
@@ -34,6 +61,10 @@
 
 	&__form-row {
 		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 767px) {
+			flex-direction: column;
+			width: 100%;
+		}
 	}
 
 	&__form-btn {
@@ -48,9 +79,15 @@
 		&:hover {
 			background: #ffe754;
 		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
 	}
 }
 .input {
+	@media (max-width: 767px) {
+		width: 100%;
+	}
 	label {
 		display: block;
 		color: $text;
@@ -64,6 +101,12 @@
 		border: 1px solid #f2f2f2;
 		background: $white;
 		@include transition;
+		@media (max-width: 1024px) {
+			width: 356px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
 		&::placeholder {
 			color: #9599aa;
 			opacity: 1;
@@ -79,7 +122,7 @@
 
 .custom-checkbox {
 	margin-top: 24px;
-	@include flex(row, flex-start, center, 8px);
+	@include flex(row, flex-start, flex-start, 8px);
 	@include text-style(14px, 300, 130%);
 	cursor: pointer;
 }
