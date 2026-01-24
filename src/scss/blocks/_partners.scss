@@ -1,13 +1,23 @@
 @use '../abstracts' as *;
 
 .partners-wrap {
-	padding: 40px 78px;
+	padding: 40px 0;
 	background: $bg;
 	@media (max-width: 1024px) {
-		padding: 40px 20px;
+		padding: 40px 0;
+	}
+	@media (max-width: 767px) {
+		padding: 40px 4px;
+	}
+	.container {
+		@media (min-width: 767px) {
+			max-width: 100%;
+			padding: 0;
+		}
 	}
 }
 .partners {
+	overflow: hidden;
 	&__title {
 		color: $text;
 		@include text-style(40px, 500, normal, center);
@@ -18,19 +28,46 @@
 		}
 	}
 
-	&__list {
-		@include flex(row, space-between, center);
-		@media (max-width: 1024px) {
-			gap: 40px;
-		}
+	&__track {
+		display: flex;
+		width: 200%;
+		animation: marquee-infinite 12s linear infinite;
 		@media (max-width: 767px) {
+			width: 100%;
+			animation: 0;
+		}
+	}
+
+	&__list {
+		width: 100%;
+		@include flex(row, space-between, center);
+		@media (max-width: 767px) {
+			gap: 40px;
 			flex-wrap: wrap;
 		}
 	}
 
+	&__list.is-duplicate {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
 	&__item {
+		width: 25%;
+		margin-right: 100px;
 		@media (max-width: 767px) {
 			width: 43%;
+			margin-right: 0;
 		}
+	}
+}
+
+@keyframes marquee-infinite {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
 	}
 }
