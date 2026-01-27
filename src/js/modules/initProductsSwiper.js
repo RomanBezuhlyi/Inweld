@@ -1,10 +1,10 @@
-export function initNewsSwiper() {
-	new Swiper('.news__swiper', {
+export function initProductsSwiper() {
+	new Swiper('.products__swiper', {
 		spaceBetween: 8,
 		slidesPerView: 1.2,
 		navigation: {
-			prevEl: '.news__pagination-prev',
-			nextEl: '.news__pagination-next',
+			prevEl: '.products__pagination-prev',
+			nextEl: '.products__pagination-next',
 		},
 		breakpoints: {
 			767: {

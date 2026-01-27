@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 
-.news {
+.products {
 	padding: 120px 78px;
 	overflow: hidden;
 	@media (max-width: 1024px) {
@@ -65,11 +65,25 @@
 	}
 
 	&__item {
+		position: relative;
 		@include flex(column, flex-start, flex-start);
 		padding: 16px;
 		border-radius: 12px;
 		border: 1px solid #eef3f8;
 		background: $white;
+	}
+
+	&__item-mark {
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		@include center;
+		padding: 8px 12px;
+		color: $text;
+		@include text-style(14px, 400, 110%);
+		text-transform: uppercase;
+		border-radius: 8px;
+		background: $accent;
 	}
 
 	&__item-img {

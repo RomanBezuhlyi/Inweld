@@ -3,8 +3,6 @@
 .hero-wrap {
 	position: relative;
 	@include center;
-	background-size: cover;
-	background-repeat: no-repeat;
 	@include box(100%, 465px);
 	overflow: hidden;
 	@media (max-width: 1024px) {
@@ -12,6 +10,17 @@
 	}
 	@media (max-width: 767px) {
 		height: 280px;
+	}
+
+	&__swiper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(100%);
+	}
+	.swiper-slide > img {
+		@include box(100%);
+		object-fit: cover;
 	}
 }
 .hero {

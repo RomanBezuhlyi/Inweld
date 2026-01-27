@@ -9,22 +9,48 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-		/>
-		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+</script>
 		<link rel="stylesheet" href="./css/main.css" />
+		<style>
+			.main {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.main__list {
+				margin: auto;
+				padding: 24px;
+				width: 300px;
+				height: auto;
+				background-color: bisque;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+			.main__item {
+				font-size: 18px;
+			}
+			.main__item:hover {
+				color: brown;
+			}
+		</style>
 	</head>
 
 	<body>
-		@@include('blocks/header.html')
-		<main>
-			@@include('blocks/hero.html')@@include('blocks/categories.html')
-			@@include('blocks/why-us.html')@@include('blocks/news.html')
-			@@include('blocks/partners.html')@@include('blocks/reviews.html')@@include('blocks/updates.html')
-		</main>
-		@@include('blocks/footer.html')
+		<div class="main">
+			<div class="container">
+				<ul class="main__list">
+					<li class="main__item">
+						<a href="home-page.html" target="_blank">Home page</a>
+					</li>
+					<li class="main__item">
+						<a href="product-page.html" target="_blank">Product page</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="./js/index.bundle.js"></script>
 	</body>
