@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.intro {
+	position: relative;
+	@include center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 240px;
+	z-index: 1;
+	overflow: hidden;
+	@media (max-width: 1024px) {
+		height: 207px;
+	}
+	@media (max-width: 767px) {
+		height: 120px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: block;
+		@include box(631px, 179px);
+		border-radius: 631px;
+		background: rgba(0, 0, 0, 0.6);
+		filter: blur(60px);
+		z-index: -1;
+		@media (max-width: 1024px) {
+			height: 138px;
+		}
+		@media (max-width: 767px) {
+			width: 368px;
+		}
+	}
+	&__title {
+		margin: auto;
+		color: $white;
+		@include text-style(48px, 500, normal, center);
+		text-transform: uppercase;
+		max-width: 819px;
+		width: 100%;
+		@media (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+}

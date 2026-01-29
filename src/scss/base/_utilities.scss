@@ -6,6 +6,7 @@
 
 .breadcrumbs {
 	@include flex(row, flex-start, center, 8px);
+	flex-wrap: wrap;
 	margin-bottom: 24px;
 	@media (max-width: 767px) {
 		margin-bottom: 16px;
@@ -15,25 +16,5 @@
 		color: $text;
 		@include text-style(16px, 300, 130%);
 		text-transform: capitalize;
-	}
-
-	&__item:nth-child(3) {
-		@media (max-width: 767px) {
-			a {
-				display: none;
-			}
-			&::after {
-				content: '...';
-			}
-		}
-	}
-
-	&__item:last-child {
-		@media (max-width: 767px) {
-			max-width: 100%;
-			overflow: hidden;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-		}
 	}
 }

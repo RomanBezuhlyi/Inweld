@@ -204,7 +204,7 @@
 	}
 }
 
-.catalog-overlay {
+.catalog-menu-overlay {
 	position: absolute;
 	left: 0;
 	top: 122px;
@@ -221,13 +221,13 @@
 		top: 80px;
 		height: calc(100vh - 80px);
 	}
-	&.open-catalog {
+	&.open-catalog-menu {
 		opacity: 1;
 		pointer-events: all;
 		transform: translateY(0);
 	}
 }
-.catalog-wrap {
+.catalog-menu-wrap {
 	padding: 45px 102px;
 	border-bottom: 1px solid $accent;
 	background: $white;
@@ -238,7 +238,7 @@
 		padding: 16px;
 	}
 }
-.catalog {
+.catalog-menu {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 24px;
@@ -458,5 +458,186 @@
 		display: block;
 		@include box(100%, 3px);
 		background-color: $accent;
+	}
+}
+
+.cart-overlay {
+	position: absolute;
+	top: 122px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 122px);
+	background: rgba(26, 26, 26, 0.6);
+	backdrop-filter: blur(6px);
+	z-index: 120;
+	opacity: 0;
+	pointer-events: none;
+	overflow: auto;
+	@include transition;
+	@media (max-width: 1024px) {
+		top: 80px;
+		height: calc(100% - 80px);
+	}
+	@media (max-width: 767px) {
+		top: 72px;
+		height: calc(100% - 72px);
+	}
+	&.visible-cart {
+		opacity: 1;
+		pointer-events: all;
+
+		.cart {
+			transform: translate(0);
+		}
+	}
+}
+.cart {
+	@include box(495px, 100%);
+	background: $white;
+	margin-left: auto;
+	padding: 32px 102px 32px 32px;
+	transform: translateX(10px);
+	@include transition;
+	@media (max-width: 1024px) {
+		width: 425px;
+		padding: 32px;
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+		padding: 24px 16px;
+		transform: translateX(0);
+		transform: translateY(-10px);
+	}
+	&__top {
+		width: 100%;
+		@include flex(row, space-between, center);
+		margin-bottom: 16px;
+		p {
+			color: $text;
+			@include text-style(28px, 500, normal);
+		}
+	}
+
+	&__top-close {
+		@include center;
+	}
+
+	&__list {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 16px);
+		margin-bottom: 32px;
+	}
+
+	&__item {
+		@include flex(row, flex-start, flex-start, 8px);
+	}
+
+	&__item-img {
+		@include center;
+		padding: 5px;
+		flex-shrink: 0;
+		@include box(80px);
+		border-radius: 8px;
+		border: 1px solid $bg;
+	}
+
+	&__item-info {
+		@include flex(column, flex-start, flex-start, 16px);
+	}
+
+	&__item-info--top {
+		@include flex(row, space-between, flex-start, 8px);
+	}
+
+	&__item-info--title {
+		color: $text;
+		@include text-style(16px, 300, normal);
+	}
+
+	&__item-info--close {
+		@include center;
+	}
+
+	&__item-info--bottom {
+		width: 100%;
+		@include flex(row, space-between, flex-start, 8px);
+	}
+
+	.quantity-counter {
+		@include flex(row, center, center, 10px);
+		border: 1px solid $bg;
+		border-radius: 8px;
+		padding: 6px 12px;
+
+		button {
+			@include transition;
+			font-size: 16px;
+		}
+
+		.count {
+			color: $text;
+			@include text-style(16px, 300, normal);
+		}
+	}
+
+	&__item-info--price {
+		color: $text;
+		@include text-style(24px, 500, 110%);
+		text-transform: uppercase;
+	}
+
+	&__details {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 8px);
+		padding-bottom: 8px;
+		border-bottom: 1px solid $bg;
+		margin-bottom: 8px;
+	}
+
+	&__details-item {
+		width: 100%;
+		@include flex(row, space-between, center);
+
+		p {
+			color: $text;
+			@include text-style(16px, 300, normal);
+		}
+	}
+
+	&__total {
+		width: 100%;
+		@include flex(row, space-between, center);
+		margin-bottom: 16px;
+		p {
+			color: $text;
+			@include text-style(24px, 500, normal);
+		}
+	}
+
+	&__btns {
+		width: 100%;
+		@include flex(row, center, center, 8px);
+	}
+
+	&__btn--call {
+		@include flex(row, center, center, 8px);
+		color: $text;
+		@include text-style(14px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		@include box(50%, 44px);
+		border: 2px solid $accent;
+	}
+
+	&__btn--order {
+		@include center;
+		padding: 12px 16px;
+		color: $text;
+		@include text-style(14px, 500, normal, center);
+		white-space: nowrap;
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		@include box(50%, 44px);
+		background: $accent;
 	}
 }

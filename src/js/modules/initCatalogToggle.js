@@ -1,12 +1,12 @@
 export function initCatalogToggle() {
 	const buttons = document.querySelectorAll('.catalog-open')
-	const overlay = document.querySelector('.catalog-overlay')
-	const catalogWrap = document.querySelector('.catalog-wrap')
-	const closeButton = document.querySelector('.catalog-close') // нова кнопка
+	const overlay = document.querySelector('.catalog-menu-overlay')
+	const catalogWrap = document.querySelector('.catalog-menu-wrap')
+	const closeButton = document.querySelector('.catalog-menu-close') // нова кнопка
 
 	if (!buttons.length || !overlay || !catalogWrap) return
 
-	const openClass = 'open-catalog'
+	const openClass = 'open-catalog-menu'
 
 	function openCatalog() {
 		overlay.classList.add(openClass)

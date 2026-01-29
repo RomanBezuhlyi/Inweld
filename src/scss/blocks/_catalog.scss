@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+
+.catalog {
+	padding: 32px 102px 104px 102px;
+	@media (max-width: 1024px) {
+		padding: 24px 20px 120px 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 24px 16px 80px 16px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 24px;
+		@media (max-width: 1024px) {
+			grid-template-columns: repeat(3, 1fr);
+			row-gap: 40px;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 8px;
+			row-gap: 32px;
+		}
+	}
+
+	&__item {
+		@include flex(column, flex-start, center, 12px);
+		&:hover {
+			.catalog__item-img {
+				box-shadow: 0 0 4px 0 $accent;
+			}
+			.catalog__item-title {
+				color: $accent;
+			}
+		}
+	}
+
+	&__item-img {
+		@include center;
+		@include box(100%, 300px, 8px);
+		box-shadow: 0 0 4px 0 rgba(174, 175, 178, 0.25);
+		overflow: hidden;
+		@include transition;
+		img {
+			object-fit: cover;
+			height: 100%;
+		}
+		@media (max-width: 1024px) {
+			height: 156px;
+		}
+	}
+
+	&__item-title {
+		color: $text;
+		@include text-style(18px, 400, normal, center);
+		letter-spacing: -0.312px;
+		@include transition;
+		@media (max-width: 1024px) {
+			@include text-style(16px, 400, normal, center);
+		}
+	}
+}
