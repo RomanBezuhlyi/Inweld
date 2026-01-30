@@ -1,8 +1,9 @@
 export function initProductCounter() {
 	const valueEl = document.getElementById('counterValue')
+	const inputEl = document.getElementById('counterValue-input')
 	const buttons = document.querySelectorAll('.counter__btn')
 
-	// якщо основний елемент або кнопок немає — виходимо
+	// якщо основного елемента або кнопок немає — виходимо
 	if (!valueEl || !buttons.length) return
 
 	const MIN = 1
@@ -11,6 +12,7 @@ export function initProductCounter() {
 
 	function update() {
 		valueEl.textContent = value
+		if (inputEl) inputEl.value = value
 
 		const decBtn = document.querySelector('[data-action="dec"]')
 		const incBtn = document.querySelector('[data-action="inc"]')
