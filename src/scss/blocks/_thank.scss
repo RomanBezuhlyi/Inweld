@@ -46,5 +46,8 @@
 		letter-spacing: -0.312px;
 		border-radius: 8px;
 		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
 	}
 }

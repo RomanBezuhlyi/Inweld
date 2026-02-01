@@ -9,6 +9,7 @@ import { initHeroSwiper } from './modules/initHeroSwiper'
 import { initMobileFilter } from './modules/initMobileFilter'
 import { initMobileMenu } from './modules/initMobileMenu'
 import { initPhoneMask } from './modules/initPhoneMask.js'
+import { initPopups } from './modules/initPopups.js'
 import { initProductAccordion } from './modules/initProductAccordion'
 import { initProductCounter } from './modules/initProductCounter'
 import { initProductSwiper } from './modules/initProductSwiper'
@@ -34,4 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	initPhoneMask()
 	initDropdowns()
 	initCopyPaymentValues()
+	initPopups()
 })

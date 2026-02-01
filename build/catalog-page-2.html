@@ -8,7 +8,7 @@
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/></script>
+		/>
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 
@@ -1102,7 +1102,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 		<li class="catalog-second__item">
@@ -1119,7 +1124,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 		<li class="catalog-second__item">
@@ -1136,7 +1146,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 		<li class="catalog-second__item">
@@ -1153,7 +1168,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 		<li class="catalog-second__item">
@@ -1170,7 +1190,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 		<li class="catalog-second__item">
@@ -1187,7 +1212,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 		<li class="catalog-second__item">
@@ -1204,7 +1234,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 		<li class="catalog-second__item">
@@ -1221,7 +1256,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 		<li class="catalog-second__item">
@@ -1240,7 +1280,12 @@
 			</p>
 			<div class="catalog-second__item-btns">
 				<button class="catalog-second__item-btn--more">Детальніше</button>
-				<button class="catalog-second__item-btn--price">Запит ціни</button>
+				<button
+					class="catalog-second__item-btn--price"
+					data-popup-target="priceRequest"
+				>
+					Запит ціни
+				</button>
 			</div>
 		</li>
 	</ul>
@@ -1509,6 +1554,76 @@
 		</div>
 	</div>
 </footer>
+<!-- Попапи -->
+<div class="popup" id="callMe">
+	<div class="popup__content">
+		<button class="popup__close">
+			<img src="./img/icon-close.svg" alt="" />
+		</button>
+		<h2>Передзвоніть мені</h2>
+		<form class="popup__form">
+			<div class="input">
+				<label>Номер телефону</label>
+				<input
+					type="text"
+					placeholder="Номер телефону"
+					data-phone-input
+					required
+				/>
+			</div>
+			<button type="submit">Відправити</button>
+		</form>
+	</div>
+</div>
+
+<div class="popup" id="priceRequest">
+	<div class="popup__content">
+		<button class="popup__close">
+			<img src="./img/icon-close.svg" alt="" />
+		</button>
+		<h2>Запит ціни</h2>
+		<form class="popup__form">
+			<div class="input">
+				<label>Імʼя</label>
+				<input type="text" placeholder="Імʼя" required />
+			</div>
+			<div class="input">
+				<label>Email</label>
+				<input type="text" placeholder="example@email.com" required />
+			</div>
+			<div class="input">
+				<label>Номер телефону</label>
+				<input
+					type="text"
+					placeholder="Номер телефону"
+					data-phone-input
+					required
+				/>
+			</div>
+			<button type="submit">Відправити</button>
+		</form>
+	</div>
+</div>
+
+<div class="popup" id="feedback">
+	<div class="popup__content">
+		<button class="popup__close">
+			<img src="./img/icon-close.svg" alt="" />
+		</button>
+		<h2>Залишити відгук</h2>
+		<form class="popup__form">
+			<div class="input">
+				<label>Імʼя</label>
+				<input type="text" placeholder="Імʼя" required />
+			</div>
+			<div class="textarea">
+				<label>Відгук</label>
+				<textarea placeholder="Відгук" required></textarea>
+			</div>
+			<button type="submit">Відправити</button>
+		</form>
+	</div>
+</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/imask"></script>
