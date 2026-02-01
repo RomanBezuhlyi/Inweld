@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+.thank {
+	@include flex(column, center, center);
+	padding-top: 180px;
+	padding-bottom: 248px;
+	@media (max-width: 1024px) {
+		padding-top: 162px;
+		padding-bottom: 162px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 96px;
+		padding-bottom: 96px;
+	}
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal, center);
+		margin-bottom: 16px;
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, normal, center);
+		}
+	}
+
+	&__text {
+		color: $grey;
+		@include text-style(16px, 300, normal, center);
+		margin-bottom: 16px;
+	}
+
+	&__order {
+		color: $text;
+		@include text-style(16px, 300, normal, center);
+	}
+
+	&__num {
+		color: $text;
+		@include text-style(16px, 700, 140%, center);
+		margin-bottom: 24px;
+	}
+
+	&__back {
+		@include center;
+		padding: 12px 16px;
+		color: $text;
+		@include text-style(14px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+	}
+}

@@ -84,41 +84,6 @@
 		}
 	}
 }
-.input {
-	@media (max-width: 767px) {
-		width: 100%;
-	}
-	label {
-		display: block;
-		color: $text;
-		@include text-style(16px, 400, 130%);
-		margin-bottom: 10px;
-	}
-	input {
-		@include text-style(14px, 400, 130%);
-		padding: 16px 15px;
-		@include box(299px, 50px, 8px);
-		border: 1px solid #f2f2f2;
-		background: $white;
-		@include transition;
-		@media (max-width: 1024px) {
-			width: 356px;
-		}
-		@media (max-width: 767px) {
-			width: 100%;
-		}
-		&::placeholder {
-			color: #9599aa;
-			opacity: 1;
-		}
-		&:hover {
-			border-color: #ffe754;
-		}
-		&:focus {
-			border-color: #ffe754;
-		}
-	}
-}
 
 .custom-checkbox {
 	margin-top: 24px;

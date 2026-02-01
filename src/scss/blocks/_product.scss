@@ -193,44 +193,6 @@
 		@media (max-width: 1024px) {
 			@include flex(column, flex-start, flex-start, 24px);
 		}
-		.counter {
-			display: inline-flex;
-			flex-direction: column;
-			gap: 10px;
-			user-select: none;
-			@media (max-width: 1024px) {
-				width: 100%;
-				@include flex(row, space-between, center);
-			}
-			@media (max-width: 1024px) {
-				width: 100%;
-				justify-content: flex-start;
-			}
-
-			&__label {
-				color: $text;
-				@include text-style(16px, 400, 130%);
-			}
-
-			&__box {
-				@include flex(row, center, center, 20px);
-				@include box(70px, 50px);
-				background: #f2f2f2;
-			}
-
-			&__value {
-				color: $text;
-				@include text-style(14px, 400, 130%);
-			}
-
-			&__controls {
-				@include flex(column, center, center, 5px);
-			}
-
-			&__btn {
-				@include center;
-			}
-		}
 	}
 
 	&__btns {

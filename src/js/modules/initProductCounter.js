@@ -1,35 +1,43 @@
 export function initProductCounter() {
-	const valueEl = document.getElementById('counterValue')
-	const inputEl = document.getElementById('counterValue-input')
-	const buttons = document.querySelectorAll('.counter__btn')
+	const counters = document.querySelectorAll('.counter__box')
+	if (!counters.length) return
 
-	// якщо основного елемента або кнопок немає — виходимо
-	if (!valueEl || !buttons.length) return
+	counters.forEach(counter => {
+		// захист від повторної ініціалізації
+		if (counter.dataset.inited === 'true') return
+		counter.dataset.inited = 'true'
 
-	const MIN = 1
-	const MAX = 10
-	let value = MIN
+		const valueEl = counter.querySelector('.counter__value')
+		const buttons = counter.querySelectorAll('.counter__btn')
 
-	function update() {
-		valueEl.textContent = value
-		if (inputEl) inputEl.value = value
+		if (!valueEl || !buttons.length) return
 
-		const decBtn = document.querySelector('[data-action="dec"]')
-		const incBtn = document.querySelector('[data-action="inc"]')
+		const MIN = Number(counter.dataset.min) || 1
+		const MAX = Number(counter.dataset.max) || 10
 
-		if (decBtn) decBtn.disabled = value === MIN
-		if (incBtn) incBtn.disabled = value === MAX
-	}
+		let value = Number(valueEl.textContent.trim()) || MIN
 
-	buttons.forEach(btn => {
-		btn.addEventListener('click', () => {
-			const action = btn.dataset.action
-			if (action === 'inc' && value < MAX) value++
-			if (action === 'dec' && value > MIN) value--
+		function update() {
+			value = Math.min(Math.max(value, MIN), MAX)
+			valueEl.textContent = value
 
-			update()
+			const incBtn = counter.querySelector('[data-action="inc"]')
+			const decBtn = counter.querySelector('[data-action="dec"]')
+
+			if (incBtn) incBtn.disabled = value >= MAX
+			if (decBtn) decBtn.disabled = value <= MIN
+		}
+
+		buttons.forEach(btn => {
+			btn.addEventListener('click', () => {
+				const action = btn.dataset.action
+				if (action === 'inc') value++
+				if (action === 'dec') value--
+
+				update()
+			})
 		})
-	})
 
-	update()
+		update()
+	})
 }

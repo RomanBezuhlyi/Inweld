@@ -519,77 +519,277 @@
 </div>
 
 		<main>
-			<section class="intro" style="background-image: url(./img/intro-1.png)">
-	<div class="container">
-		<h1 class="intro__title">Зварювальне обладнання</h1>
-	</div>
-</section>
-<section class="catalog container">
-	<div class="catalog__list">
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-1.png" alt="" />
+			<section class="checkout-wrap container">
+	<ul class="breadcrumbs">
+		<li class="breadcrumbs__item">
+			<a href="#">Головна</a>
+		</li>
+		<li class="breadcrumbs__item separator">|</li>
+		<li class="breadcrumbs__item">
+			<a href="#">Корзина</a>
+		</li>
+		<li class="breadcrumbs__item separator">|</li>
+		<li class="breadcrumbs__item">
+			<a href="#">Оформлення замовлення</a>
+		</li>
+	</ul>
+	<div class="checkout">
+		<div class="checkout__left">
+			<h1 class="checkout__title">Оформлення замовлення</h1>
+			<div class="checkout__block">
+				<h2 class="checkout__block-title">Контактна інформація</h2>
+				<from class="checkout__block-form">
+					<div class="row">
+						<div class="input">
+							<label>Імʼя</label>
+							<input type="text" placeholder="Імʼя" />
+						</div>
+						<div class="input">
+							<label>Прізвище</label>
+							<input type="text" placeholder="Прізвище" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="input">
+							<label>Телефон</label>
+							<input
+								type="text"
+								placeholder="+380 (__) ___-__-__"
+								data-phone-input
+							/>
+						</div>
+						<div class="input">
+							<label>Email</label>
+							<input type="email" placeholder="Email" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="textarea">
+							<label>Коментар</label>
+							<textarea placeholder="Коментар"></textarea>
+						</div>
+					</div>
+				</from>
 			</div>
-			<p class="catalog__item-title">
-				Зварювальне обладнання для ММА зварювання
-			</p>
-		</a>
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-2.png" alt="" />
+			<div class="checkout__block">
+				<h2 class="checkout__block-title">Доставка</h2>
+				<form class="radio-group">
+					<label class="radio">
+						<input type="radio" name="plan" value="Відділення" checked />
+						<span class="radio__control"></span>
+						<span class="radio__label">Відділення</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="plan" value="Поштомат" />
+						<span class="radio__control"></span>
+						<span class="radio__label">Поштомат</span>
+					</label>
+
+					<label class="radio">
+						<input
+							type="radio"
+							name="plan"
+							value="Безготівковий розрахунок (для компаній)"
+						/>
+						<span class="radio__control"></span>
+						<span class="radio__label"
+							>Самовивіз (Київ, вул. Автотранспортна 4)</span
+						>
+					</label>
+					<div class="dropdown" data-value="">
+						<label class="dropdown__label">Населений пункт</label>
+						<button class="dropdown__trigger" type="button">
+							<span>Виберіть населений пункт</span>
+							<i></i>
+						</button>
+
+						<ul class="dropdown__menu">
+							<li data-value="kyiv">Київ</li>
+							<li data-value="lviv">Львів</li>
+							<li data-value="odesa">Одеса</li>
+						</ul>
+					</div>
+					<div class="dropdown" data-value="">
+						<label class="dropdown__label">Відділення</label>
+						<button class="dropdown__trigger" type="button">
+							<span>Виберіть відділення</span>
+							<i></i>
+						</button>
+
+						<ul class="dropdown__menu">
+							<li data-value="3">Відділення 3</li>
+							<li data-value="5">Відділення 5</li>
+							<li data-value="11">Відділення 11</li>
+						</ul>
+					</div>
+				</form>
 			</div>
-			<p class="catalog__item-title">
-				Зварювальне обладнання для MIG/MAG зварювання
-			</p>
-		</a>
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-3.png" alt="" />
+			<div class="checkout__block">
+				<h2 class="checkout__block-title">Оплата</h2>
+				<form class="radio-group">
+					<label class="radio">
+						<input type="radio" name="plan" value="Оплата на рахунок" checked />
+						<span class="radio__control"></span>
+						<span class="radio__label">Оплата на рахунок</span>
+					</label>
+
+					<label class="radio">
+						<input type="radio" name="plan" value="Онлайн оплата на сайті" />
+						<span class="radio__control"></span>
+						<span class="radio__label">Онлайн оплата на сайті</span>
+					</label>
+
+					<label class="radio">
+						<input
+							type="radio"
+							name="plan"
+							value="Безготівковий розрахунок (для компаній)"
+						/>
+						<span class="radio__control"></span>
+						<span class="radio__label"
+							>Безготівковий розрахунок (для компаній)</span
+						>
+					</label>
+
+					<label class="radio">
+						<input
+							type="radio"
+							name="plan"
+							value="Оплата за реквізитами (для фізичних осіб)"
+						/>
+						<span class="radio__control"></span>
+						<span class="radio__label"
+							>Оплата за реквізитами (для фізичних осіб)</span
+						>
+					</label>
+				</form>
+				<button class="checkout__submit" type="submit">
+					Оформити замовлення
+				</button>
 			</div>
-			<p class="catalog__item-title">
-				Зварювальне обладнання для TIG зварювання
-			</p>
-		</a>
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-4.png" alt="" />
+		</div>
+		<div class="checkout__right">
+			<div class="order">
+				<h2 class="order__title">Ваше замовлення</h2>
+				<ul class="order__list">
+					<li class="order__item">
+						<div class="order__item-img">
+							<img src="./img/new-1.png" alt="" />
+							<button class="order__item-close">
+								<img src="./img/icon-close.svg" alt="" />
+							</button>
+						</div>
+						<div class="order__item-info">
+							<p class="order__item-name">
+								Зварювальний напівавтомат WARRIOR 400iCC/CV
+							</p>
+							<div class="order__item-bottom">
+								<div class="counter__box">
+									<span class="counter__value" id="counterValue">1</span>
+									<div class="counter__controls">
+										<button class="counter__btn" data-action="inc">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="6"
+												height="5"
+												viewBox="0 0 6 5"
+												fill="none"
+											>
+												<path
+													d="M2.59186 0L5.18364 4.5L7.1764e-05 4.5L2.59186 0Z"
+													fill="#222222"
+												/>
+											</svg>
+										</button>
+										<button class="counter__btn" data-action="dec">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="6"
+												height="5"
+												viewBox="0 0 6 5"
+												fill="none"
+											>
+												<path
+													d="M2.59174 4.5L-4.90298e-05 1.25622e-08L5.18352 -4.417e-07L2.59174 4.5Z"
+													fill="#222222"
+												/>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<p class="order__item-price">141 377.96 ₴</p>
+							</div>
+						</div>
+					</li>
+					<li class="order__item">
+						<div class="order__item-img">
+							<img src="./img/new-1.png" alt="" />
+							<button class="order__item-close">
+								<img src="./img/icon-close.svg" alt="" />
+							</button>
+						</div>
+						<div class="order__item-info">
+							<p class="order__item-name">
+								Зварювальний напівавтомат WARRIOR 400iCC/CV
+							</p>
+							<div class="order__item-bottom">
+								<div class="counter__box">
+									<span class="counter__value" id="counterValue">1</span>
+									<div class="counter__controls">
+										<button class="counter__btn" data-action="inc">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="6"
+												height="5"
+												viewBox="0 0 6 5"
+												fill="none"
+											>
+												<path
+													d="M2.59186 0L5.18364 4.5L7.1764e-05 4.5L2.59186 0Z"
+													fill="#222222"
+												/>
+											</svg>
+										</button>
+										<button class="counter__btn" data-action="dec">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="6"
+												height="5"
+												viewBox="0 0 6 5"
+												fill="none"
+											>
+												<path
+													d="M2.59174 4.5L-4.90298e-05 1.25622e-08L5.18352 -4.417e-07L2.59174 4.5Z"
+													fill="#222222"
+												/>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<p class="order__item-price">141 377.96 ₴</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="order__price">
+					<ul class="order__price-list">
+						<li class="order__price-item">
+							<p>Сума</p>
+							<p>141 377.96 ₴</p>
+						</li>
+						<li class="order__price-item">
+							<p>ПДВ</p>
+							<p>1 377.96 ₴</p>
+						</li>
+					</ul>
+					<div class="order__price-total">
+						<p>Всього</p>
+						<p>284 377.96 ₴</p>
+					</div>
+				</div>
 			</div>
-			<p class="catalog__item-title">Подача дроту</p>
-		</a>
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-5.png" alt="" />
-			</div>
-			<p class="catalog__item-title">Зварювальні генератори</p>
-		</a>
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-6.png" alt="" />
-			</div>
-			<p class="catalog__item-title">
-				Устаткування для автоматичного зварювання
-			</p>
-		</a>
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-7.png" alt="" />
-			</div>
-			<p class="catalog__item-title">
-				Устаткування для роботизованого зварювання
-			</p>
-		</a>
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-8.png" alt="" />
-			</div>
-			<p class="catalog__item-title">Компоненти та витратні частини</p>
-		</a>
-		<a class="catalog__item" href="#">
-			<div class="catalog__item-img">
-				<img src="./img/catalog-9.png" alt="" />
-			</div>
-			<p class="catalog__item-title">Лазерне зварювання</p>
-		</a>
+		</div>
 	</div>
 </section>
 

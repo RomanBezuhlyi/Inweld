@@ -18,3 +18,225 @@
 		text-transform: capitalize;
 	}
 }
+
+.input {
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+	label {
+		display: block;
+		color: $text;
+		@include text-style(16px, 400, 130%);
+		margin-bottom: 10px;
+	}
+	input {
+		@include text-style(14px, 400, 130%);
+		padding: 16px 15px;
+		@include box(299px, 50px, 8px);
+		border: 1px solid #f2f2f2;
+		background: $white;
+		@include transition;
+		@media (max-width: 1024px) {
+			width: 356px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+		&::placeholder {
+			color: #9599aa;
+			opacity: 1;
+		}
+		&:hover {
+			border-color: #ffe754;
+		}
+		&:focus {
+			border-color: #ffe754;
+		}
+	}
+}
+
+.textarea {
+	width: 100%;
+	label {
+		display: block;
+		color: $text;
+		@include text-style(16px, 400, 130%);
+		margin-bottom: 10px;
+	}
+	textarea {
+		@include text-style(14px, 400, 130%);
+		padding: 16px 15px;
+		@include box(100%, 120px, 8px);
+		border: 1px solid #f2f2f2;
+		background: $white;
+		@include transition;
+		resize: none;
+		@media (max-width: 1024px) {
+			width: 356px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+		&::placeholder {
+			color: #9599aa;
+			opacity: 1;
+		}
+		&:hover {
+			border-color: #ffe754;
+		}
+		&:focus {
+			border-color: #ffe754;
+		}
+	}
+}
+
+.radio-group {
+	display: grid;
+	gap: 16px;
+	width: 100%;
+}
+
+.radio {
+	@include flex(row, flex-start, center, 9px);
+	cursor: pointer;
+	user-select: none;
+}
+
+/* Ховаємо нативну радіокнопку */
+.radio input {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.radio__control {
+	@include box(20px, 20px, 50%);
+	background: #f2f2f2;
+	display: grid;
+	place-items: center;
+	@include transition;
+}
+
+/* Внутрішня крапка */
+.radio__control::after {
+	content: '';
+	@include box(12px, 12px, 50%);
+	background: $accent;
+	transform: scale(0);
+	@include transition;
+}
+
+.radio input:checked + .radio__control::after {
+	transform: scale(1);
+}
+
+.radio__label {
+	color: $text;
+	@include text-style(14px, 400, normal);
+	letter-spacing: -0.312px;
+}
+
+.dropdown {
+	margin-top: 8px;
+	position: relative;
+	width: 100%;
+	&__label {
+		display: block;
+		color: $text;
+		@include text-style(16px, 400, 130%);
+		margin-bottom: 10px;
+	}
+
+	&__trigger {
+		width: 100%;
+		padding: 16px 15px;
+		border-radius: 8px;
+		border: 1px solid #f2f2f2;
+		background: $white;
+		color: #9599aa;
+		@include text-style(14px, 400, 130%);
+		@include flex(row, space-between, center);
+		cursor: pointer;
+	}
+
+	&__trigger i {
+		width: 8px;
+		height: 8px;
+		border-right: 2px solid #9599aa;
+		border-bottom: 2px solid #9599aa;
+		transform: rotate(45deg);
+		transition: transform 0.2s;
+	}
+
+	&__menu {
+		position: absolute;
+		inset: calc(100% + 6px) 0 auto;
+		background: $white;
+		border-radius: 8px;
+		border: 1px solid #f2f2f2;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+		list-style: none;
+		padding: 6px;
+		margin: 0;
+		display: none;
+		z-index: 10;
+	}
+
+	&__menu li {
+		@include text-style(14px, 400, 130%);
+		padding: 8px 10px;
+		border-radius: 8px;
+		cursor: pointer;
+	}
+
+	&__menu li:hover {
+		background: #f1f5f9;
+	}
+
+	&.open .dropdown__trigger i {
+		transform: rotate(-135deg);
+	}
+
+	&.open .dropdown__menu {
+		display: block;
+	}
+}
+
+.counter {
+	display: inline-flex;
+	flex-direction: column;
+	gap: 10px;
+	user-select: none;
+	@media (max-width: 1024px) {
+		width: 100%;
+		@include flex(row, space-between, center);
+	}
+	@media (max-width: 1024px) {
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	&__label {
+		color: $text;
+		@include text-style(16px, 400, 130%);
+	}
+
+	&__box {
+		@include flex(row, center, center, 20px);
+		@include box(70px, 50px);
+		background: #f2f2f2;
+	}
+
+	&__value {
+		color: $text;
+		@include text-style(14px, 400, 130%);
+	}
+
+	&__controls {
+		@include flex(column, center, center, 5px);
+	}
+
+	&__btn {
+		@include center;
+	}
+}

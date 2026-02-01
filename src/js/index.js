@@ -1,11 +1,13 @@
 import { initCart } from './modules/initCart'
 import { initCatalogAccordion } from './modules/initCatalogAccordion'
 import { initCatalogToggle } from './modules/initCatalogToggle'
+import { initDropdowns } from './modules/initDropdowns.js'
 import { initFilters } from './modules/initFilters'
 import { initFooterMobileAccordion } from './modules/initFooterMobileAccordion'
 import { initHeroSwiper } from './modules/initHeroSwiper'
 import { initMobileFilter } from './modules/initMobileFilter'
 import { initMobileMenu } from './modules/initMobileMenu'
+import { initPhoneMask } from './modules/initPhoneMask.js'
 import { initProductAccordion } from './modules/initProductAccordion'
 import { initProductCounter } from './modules/initProductCounter'
 import { initProductSwiper } from './modules/initProductSwiper'
@@ -28,4 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initMobileFilter()
 	initQuantityCounters()
 	initCart()
+	initPhoneMask()
+	initDropdowns()
 })
