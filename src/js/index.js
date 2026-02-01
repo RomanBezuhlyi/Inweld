@@ -1,6 +1,7 @@
 import { initCart } from './modules/initCart'
 import { initCatalogAccordion } from './modules/initCatalogAccordion'
 import { initCatalogToggle } from './modules/initCatalogToggle'
+import { initCopyPaymentValues } from './modules/initCopyPaymentValues.js'
 import { initDropdowns } from './modules/initDropdowns.js'
 import { initFilters } from './modules/initFilters'
 import { initFooterMobileAccordion } from './modules/initFooterMobileAccordion'
@@ -32,4 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	initCart()
 	initPhoneMask()
 	initDropdowns()
+	initCopyPaymentValues()
 })

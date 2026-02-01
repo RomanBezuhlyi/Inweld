@@ -1,0 +1,187 @@
+@use '../abstracts' as *;
+
+.payment {
+	padding-top: 61px;
+	padding-bottom: 69px;
+	@include flex(row, center, flex-start, 24px);
+	@media (max-width: 1024px) {
+		padding-top: 24px;
+		padding-bottom: 120px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 16px;
+		padding-bottom: 80px;
+	}
+	&__left {
+		@include box(396px, 488px);
+		@include flex(column, space-between, flex-start);
+		@media (max-width: 1024px) {
+			@include box(100%, auto);
+		}
+	}
+
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal);
+		margin-bottom: 8px;
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, normal);
+		}
+	}
+
+	&__order {
+		color: $text;
+		@include text-style(16px, 300, normal);
+		margin-bottom: 4px;
+	}
+
+	&__num {
+		color: $text;
+		@include text-style(16px, 700, 140%);
+		margin-bottom: 8px;
+	}
+
+	&__details {
+		color: $grey;
+		@include text-style(16px, 300, normal);
+		margin-bottom: 24px;
+	}
+
+	&__btn {
+		@include flex(row, center, center, 8px);
+		@include center;
+		padding: 12px 16px;
+		@include text-style(14px, 500, normal);
+		color: $text;
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		border: 2px solid $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__desc {
+		color: $grey;
+		@include text-style(16px, 300, normal);
+		margin-bottom: 8px;
+	}
+
+	&__number {
+		display: block;
+		color: $grey;
+		@include text-style(16px, 400, 100%);
+		letter-spacing: 0.2px;
+		margin-bottom: 6px;
+	}
+
+	&__messengers {
+		margin-top: 16px;
+		@include flex(row, flex-start, center, 16px);
+	}
+
+	&__telegram {
+		@include flex(row, center, center, 8px);
+		padding: 12px 16px;
+		color: $white;
+		@include text-style(14px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: #34aadf;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__viber {
+		@include flex(row, center, center, 8px);
+		padding: 12px 16px;
+		color: $white;
+		@include text-style(14px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: #8755a7;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__right {
+		padding: 24px 16px;
+		background: #f5f6f7;
+		@include box(396px, 488px, 8px);
+		@media (max-width: 1024px) {
+			margin-top: 24px;
+			@include box(100%, auto);
+			margin-bottom: 24px;
+		}
+		&.desktop {
+			@media (max-width: 1024px) {
+				display: none;
+			}
+		}
+		&.mobile {
+			display: none;
+			@media (max-width: 1024px) {
+				display: block;
+			}
+		}
+	}
+
+	&__right-title {
+		color: $text;
+		@include text-style(28px, 500, normal);
+		margin-bottom: 24px;
+		@media (max-width: 767px) {
+			@include text-style(24px, 500, normal);
+		}
+	}
+
+	&__list {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 24px);
+	}
+
+	&__item {
+		width: 100%;
+		@include flex(row, space-between, flex-end);
+	}
+
+	&__item-info {
+		@include flex(column, flex-start, flex-start, 4px);
+	}
+
+	&__item-label {
+		color: $text;
+		@include text-style(16px, 300, normal);
+	}
+
+	&__item-label--bold {
+		color: $text;
+		@include text-style(16px, 500, normal);
+		letter-spacing: -0.312px;
+	}
+
+	&__item-value {
+		color: $grey;
+		@include text-style(16px, 300, 140%);
+	}
+
+	&__item-value--bold {
+		color: $text;
+		@include text-style(16px, 700, 140%);
+	}
+
+	&__item-copy {
+		@include center;
+		svg {
+			stroke: #9599aa;
+			@include transition;
+		}
+		&:hover {
+			svg {
+				stroke: $accent;
+			}
+		}
+	}
+}
