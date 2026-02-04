@@ -1,8 +1,9 @@
+import { initArticlesSwiper } from './modules/initArticlesSwiper'
 import { initCart } from './modules/initCart'
 import { initCatalogAccordion } from './modules/initCatalogAccordion'
 import { initCatalogToggle } from './modules/initCatalogToggle'
 import { initCopyPaymentValues } from './modules/initCopyPaymentValues.js'
-import { initDropdowns } from './modules/initDropdowns.js'
+import { initCustomSelects } from './modules/initCustomSelects'
 import { initFilters } from './modules/initFilters'
 import { initFooterMobileAccordion } from './modules/initFooterMobileAccordion'
 import { initHeroSwiper } from './modules/initHeroSwiper'
@@ -33,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	initQuantityCounters()
 	initCart()
 	initPhoneMask()
-	initDropdowns()
 	initCopyPaymentValues()
 	initPopups()
+	initArticlesSwiper()
+	initCustomSelects()
 })

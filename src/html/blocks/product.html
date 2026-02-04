@@ -78,8 +78,14 @@
 			<div class="product__control">
 				<div class="counter">
 					<span class="counter__label">Кількість</span>
-					<div class="counter__box">
-						<span class="counter__value" id="counterValue">1</span>
+					<div class="counter__box" data-min="1" data-max="10">
+						<span class="counter__value">1</span>
+						<input
+							type="hidden"
+							name="quantity"
+							class="counter__input"
+							value="1"
+						/>
 						<div class="counter__controls">
 							<button class="counter__btn" data-action="inc">
 								<svg

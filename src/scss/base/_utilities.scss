@@ -72,7 +72,7 @@
 		@include transition;
 		resize: none;
 		@media (max-width: 1024px) {
-			width: 356px;
+			width: 100%;
 		}
 		@media (max-width: 767px) {
 			width: 100%;
@@ -136,72 +136,6 @@
 	letter-spacing: -0.312px;
 }
 
-.dropdown {
-	margin-top: 8px;
-	position: relative;
-	width: 100%;
-	&__label {
-		display: block;
-		color: $text;
-		@include text-style(16px, 400, 130%);
-		margin-bottom: 10px;
-	}
-
-	&__trigger {
-		width: 100%;
-		padding: 16px 15px;
-		border-radius: 8px;
-		border: 1px solid #f2f2f2;
-		background: $white;
-		color: #9599aa;
-		@include text-style(14px, 400, 130%);
-		@include flex(row, space-between, center);
-		cursor: pointer;
-	}
-
-	&__trigger i {
-		width: 8px;
-		height: 8px;
-		border-right: 2px solid #9599aa;
-		border-bottom: 2px solid #9599aa;
-		transform: rotate(45deg);
-		transition: transform 0.2s;
-	}
-
-	&__menu {
-		position: absolute;
-		inset: calc(100% + 6px) 0 auto;
-		background: $white;
-		border-radius: 8px;
-		border: 1px solid #f2f2f2;
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-		list-style: none;
-		padding: 6px;
-		margin: 0;
-		display: none;
-		z-index: 10;
-	}
-
-	&__menu li {
-		@include text-style(14px, 400, 130%);
-		padding: 8px 10px;
-		border-radius: 8px;
-		cursor: pointer;
-	}
-
-	&__menu li:hover {
-		background: #f1f5f9;
-	}
-
-	&.open .dropdown__trigger i {
-		transform: rotate(-135deg);
-	}
-
-	&.open .dropdown__menu {
-		display: block;
-	}
-}
-
 .counter {
 	display: inline-flex;
 	flex-direction: column;
@@ -238,5 +172,86 @@
 
 	&__btn {
 		@include center;
+	}
+}
+
+.dropdowns {
+	width: 100%;
+	@include flex(column, flex-start, center, 24px);
+	@media (max-width: 1024px) {
+		flex-direction: row;
+		gap: 20px;
+	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		gap: 20px;
+	}
+}
+
+.field {
+	position: relative;
+	width: 100%;
+
+	label {
+		display: block;
+		color: $text;
+		@include text-style(16px, 400, 130%);
+		margin-bottom: 10px;
+	}
+
+	.select-trigger {
+		width: 100%;
+		border-radius: 8px;
+		padding: 16px 15px;
+		border: 1px solid $bg;
+		background: $white;
+		color: $text;
+		@include text-style(14px, 400, 130%);
+		cursor: pointer;
+	}
+
+	.custom-options {
+		position: absolute;
+		top: calc(100% + 4px);
+		left: 0;
+		right: 0;
+		background: $white;
+		border: 1px solid $bg;
+		border-radius: 8px;
+		display: none;
+		flex-direction: column;
+		z-index: 10;
+	}
+
+	.custom-option {
+		padding: 12px 15px;
+		@include text-style(14px, 400, 130%);
+		color: $text;
+		cursor: pointer;
+
+		&:hover {
+			background: #f0f0f0;
+		}
+	}
+
+	&.open .custom-options {
+		display: flex;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 8px;
+		top: 50%;
+		transform: translateX(-50%) rotateX(0deg);
+		width: 15px;
+		height: 30px;
+		background: url('../img/icon-big-chevron.svg') no-repeat center / contain;
+		pointer-events: none;
+		@include transition;
+	}
+
+	&.open::after {
+		transform: translateX(-50%) rotateX(180deg);
 	}
 }

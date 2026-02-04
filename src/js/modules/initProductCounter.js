@@ -3,14 +3,14 @@ export function initProductCounter() {
 	if (!counters.length) return
 
 	counters.forEach(counter => {
-		// захист від повторної ініціалізації
 		if (counter.dataset.inited === 'true') return
 		counter.dataset.inited = 'true'
 
 		const valueEl = counter.querySelector('.counter__value')
+		const inputEl = counter.querySelector('.counter__input')
 		const buttons = counter.querySelectorAll('.counter__btn')
 
-		if (!valueEl || !buttons.length) return
+		if (!valueEl || !buttons.length || !inputEl) return
 
 		const MIN = Number(counter.dataset.min) || 1
 		const MAX = Number(counter.dataset.max) || 10
@@ -20,6 +20,7 @@ export function initProductCounter() {
 		function update() {
 			value = Math.min(Math.max(value, MIN), MAX)
 			valueEl.textContent = value
+			inputEl.value = value // <-- записуємо в інпут
 
 			const incBtn = counter.querySelector('[data-action="inc"]')
 			const decBtn = counter.querySelector('[data-action="dec"]')

@@ -1,0 +1,214 @@
+@use '../abstracts' as *;
+
+.advantages {
+	padding: 197px 102px 196px 102px;
+	background: $bg;
+	@media (max-width: 1024px) {
+		padding: 80px 20px;
+	}
+
+	&__desktop {
+		position: relative;
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+
+	&__octagon {
+		position: relative;
+		@include box(621px);
+		margin: 0 auto;
+		transform: rotate(22deg);
+		clip-path: polygon(
+			30% 0%,
+			70% 0%,
+			100% 30%,
+			100% 70%,
+			70% 100%,
+			30% 100%,
+			0% 70%,
+			0% 30%
+		);
+		@media (max-width: 1280px) {
+			@include box(450px);
+		}
+
+		img {
+			@include box(100%);
+			object-fit: cover;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	&__content {
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		transform: rotate(-22deg);
+		color: $white;
+		width: 344px;
+		margin: auto;
+		@include flex(column, center, center, 16px);
+
+		h2 {
+			color: $white;
+			@include text-style(40px, 500, normal, center);
+		}
+
+		p {
+			color: $white;
+			@include text-style(16px, 300, normal, center);
+		}
+	}
+
+	&__items {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		@include box(621px);
+		@media (max-width: 1280px) {
+			@include box(450px);
+		}
+	}
+
+	&__mobile-list {
+		@include flex(row, flex-start, flex-start, 20px);
+		row-gap: 16px;
+		flex-wrap: wrap;
+		@media (max-width: 767px) {
+			gap: 16px;
+		}
+	}
+
+	.adv {
+		position: absolute;
+		gap: 8px;
+		@media (max-width: 1024px) {
+			position: static;
+			width: 48%;
+			@include flex(row, flex-start, center);
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+
+		&__icon {
+			@include center;
+			@include box(80px, 80px, 100%);
+			aspect-ratio: 1/1;
+			background: $accent;
+			@media (max-width: 767px) {
+				@include box(64px, 64px, 100%);
+			}
+		}
+		p {
+			color: $text;
+			@include text-style(16px, 300, normal);
+			padding-bottom: 10px;
+			border-bottom: 1px solid $accent;
+		}
+	}
+
+	.adv--n {
+		top: -110px;
+		left: 50%;
+		transform: translateX(-50%);
+		@include flex(column-reverse, center, center);
+		p {
+			width: 181px;
+			text-align: center;
+		}
+	}
+	.adv--ne {
+		top: 30px;
+		right: -150px;
+		@include flex(row, flex-start, center);
+		p {
+			width: 181px;
+		}
+	}
+	.adv--e {
+		top: 50%;
+		right: -280px;
+		transform: translateY(-50%);
+		@include flex(row, flex-start, center);
+		p {
+			width: 218px;
+		}
+	}
+	.adv--se {
+		bottom: 30px;
+		right: -225px;
+		@include flex(row, flex-start, center);
+		p {
+			width: 255px;
+		}
+	}
+	.adv--s {
+		bottom: -110px;
+		left: 50%;
+		transform: translateX(-50%);
+		@include flex(column, center, center);
+		p {
+			width: 207px;
+			text-align: center;
+		}
+	}
+	.adv--sw {
+		bottom: 30px;
+		left: -150px;
+		@include flex(row-reverse, flex-start, center);
+		p {
+			width: 179px;
+			text-align: left;
+		}
+	}
+	.adv--w {
+		top: 50%;
+		left: -275px;
+		transform: translateY(-50%);
+		@include flex(row-reverse, flex-start, center);
+		p {
+			width: 213px;
+			text-align: left;
+		}
+	}
+	.adv--nw {
+		top: 35px;
+		left: -180px;
+		@include flex(row-reverse, flex-start, center);
+		p {
+			width: 208px;
+			text-align: left;
+		}
+	}
+
+	&__mobile {
+		display: none;
+		@media (max-width: 1024px) {
+			display: block;
+		}
+	}
+
+	&__mobile-title {
+		color: #171e2f;
+		@include text-style(40px, 500, normal);
+		margin-bottom: 16px;
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, normal);
+		}
+	}
+
+	&__mobile-text {
+		color: #171e2f;
+		@include text-style(16px, 300, normal);
+		margin-bottom: 30px;
+	}
+}

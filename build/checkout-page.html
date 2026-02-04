@@ -596,31 +596,36 @@
 							>Самовивіз (Київ, вул. Автотранспортна 4)</span
 						>
 					</label>
-					<div class="dropdown" data-value="">
-						<label class="dropdown__label">Населений пункт</label>
-						<button class="dropdown__trigger" type="button">
-							<span>Виберіть населений пункт</span>
-							<i></i>
-						</button>
+					<div class="dropdowns">
+						<div class="field" data-select>
+							<label for="city">Населений пункт</label>
+							<div class="select-trigger">Виберіть населений пункт</div>
+							<div class="custom-options">
+								<span class="custom-option" data-value="kyiv">Київ</span>
+								<span class="custom-option" data-value="lviv">Львів</span>
+								<span class="custom-option" data-value="odesa">Одеса</span>
+							</div>
+							<select id="city" name="city" hidden>
+								<option value="kyiv">Київ</option>
+								<option value="lviv">Львів</option>
+								<option value="odesa">Одеса</option>
+							</select>
+						</div>
 
-						<ul class="dropdown__menu">
-							<li data-value="kyiv">Київ</li>
-							<li data-value="lviv">Львів</li>
-							<li data-value="odesa">Одеса</li>
-						</ul>
-					</div>
-					<div class="dropdown" data-value="">
-						<label class="dropdown__label">Відділення</label>
-						<button class="dropdown__trigger" type="button">
-							<span>Виберіть відділення</span>
-							<i></i>
-						</button>
-
-						<ul class="dropdown__menu">
-							<li data-value="3">Відділення 3</li>
-							<li data-value="5">Відділення 5</li>
-							<li data-value="11">Відділення 11</li>
-						</ul>
+						<div class="field" data-select>
+							<label for="department">Відділення</label>
+							<div class="select-trigger">Виберіть відділення</div>
+							<div class="custom-options">
+								<span class="custom-option" data-value="3">Відділення 3</span>
+								<span class="custom-option" data-value="5">Відділення 5</span>
+								<span class="custom-option" data-value="11">Відділення 11</span>
+							</div>
+							<select id="department" name="department" hidden>
+								<option value="3">Відділення 3</option>
+								<option value="5">Відділення 5</option>
+								<option value="11">Відділення 11</option>
+							</select>
+						</div>
 					</div>
 				</form>
 			</div>

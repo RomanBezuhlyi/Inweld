@@ -1,0 +1,244 @@
+@use '../abstracts' as *;
+
+.news {
+	padding: 32px 102px 120px 102px;
+	@media (max-width: 1024px) {
+		padding: 25px 20px 120px 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 16px 16px 120px 16px;
+	}
+	&__top {
+		width: 100%;
+		@include flex(row, space-between, center);
+		margin-bottom: 25px;
+		@media (max-width: 767px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal);
+		@media (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+
+	&__search {
+		position: relative;
+		@include box(396px, 48px, 14px);
+		overflow: hidden;
+		@include transition;
+		@media (max-width: 1024px) {
+			width: 308px;
+		}
+		@media (max-width: 767px) {
+			@include box(36px, 36px, 45px);
+			&:hover {
+				width: 200px;
+			}
+		}
+	}
+
+	&__search-input {
+		@include box(100%);
+		@include text-style(14px, 400, normal);
+		padding: 16px;
+		border-radius: 14px;
+		border: 1px solid #f2f2f2;
+		background: $bg;
+		&::placeholder {
+			color: #9599aa;
+			opacity: 1;
+		}
+	}
+
+	&__search-btn {
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform: translateY(-50%);
+		@include box(36px, 36px, 100%);
+		@include center;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+		@media (max-width: 767px) {
+			right: 0;
+		}
+	}
+
+	&__filters {
+		width: 100%;
+		@include flex(row, space-between, center);
+		margin-bottom: 25px;
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__filters-category {
+		@include center;
+		padding: 10px;
+		color: $text;
+		@include text-style(14px, 500, normal);
+		letter-spacing: -0.312px;
+		border-bottom: 1px solid $accent;
+	}
+
+	.sort-dropdown {
+		position: relative;
+		display: inline-block;
+		z-index: 20;
+
+		&__toggle {
+			@include flex(row, flex-start, center, 4px);
+			background-color: $white;
+			color: $text;
+			@include text-style(14px, 400, normal);
+			letter-spacing: -0.312px;
+			cursor: pointer;
+		}
+
+		&__arrow {
+			@include box(24px);
+			@include transition;
+		}
+
+		&__menu {
+			position: absolute;
+			top: calc(100% + 6px);
+			right: 0;
+			width: fit-content;
+			padding: 6px 0;
+			list-style: none;
+			background-color: $white;
+			border: 1px solid $bg;
+			border-radius: 6px;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-5px);
+			@include transition;
+			li a {
+				display: block;
+				padding: 8px 14px;
+				@include text-style(14px, 400, normal);
+				color: $text;
+				white-space: nowrap;
+				text-decoration: none;
+
+				&:hover {
+					background-color: $bg;
+				}
+			}
+		}
+
+		&:hover,
+		&:focus-within {
+			.sort-dropdown__menu {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+
+			.sort-dropdown__arrow {
+				transform: rotateX(180deg);
+			}
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__item {
+		padding: 20px;
+		border-radius: 8px;
+		border: 1px solid $bg;
+		background: $white;
+		@include transition;
+		&:hover {
+			border-color: $accent;
+			img {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	&__item-img {
+		@include box(100%, 370px, 8px);
+		overflow: hidden;
+		margin-bottom: 20px;
+		@media (max-width: 1024px) {
+			height: 200px;
+		}
+		img {
+			@include box(100%);
+			object-fit: cover;
+			@include transition;
+		}
+	}
+
+	&__item-title {
+		color: $text;
+		@include text-style(20px, 400, normal);
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+	&__item-text {
+		overflow: hidden;
+		color: $text;
+		text-overflow: ellipsis;
+		@include text-style(18px, 300, 140%);
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		margin-bottom: 16px;
+	}
+
+	&__item-bottom {
+		@include flex(row, space-between, center);
+	}
+
+	&__item-date {
+		color: #9599aa;
+		@include text-style(18px, 400, 140%);
+	}
+
+	&__item-link {
+		@include center;
+		padding: 4px 8px;
+		color: $text;
+		@include text-style(16px, 300, normal);
+		border-radius: 4px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__load-btn {
+		margin: auto;
+		margin-top: 24px;
+		@include center;
+		padding: 12px 16px;
+		color: $text;
+		@include text-style(14px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+}
