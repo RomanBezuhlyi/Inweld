@@ -11,16 +11,13 @@ export function initMobileMenu() {
 		document.body.style.overflow = 'hidden'
 	}
 
-	// Звичайне закриття (скрол відновлюється)
 	const closeMenu = () => {
 		overlay.classList.remove('open-menu')
 		document.body.style.overflow = ''
 	}
 
-	// Закриття через кнопку каталога (скрол заборонений)
 	const closeMenuKeepScroll = () => {
 		overlay.classList.remove('open-menu')
-		// document.body.style.overflow лишається 'hidden'
 	}
 
 	// відкриття меню
@@ -28,20 +25,37 @@ export function initMobileMenu() {
 		btn.addEventListener('click', openMenu)
 	})
 
-	// закриття по кнопці
+	// кнопка закриття
 	if (closeButton) {
 		closeButton.addEventListener('click', closeMenu)
 	}
 
-	// закриття по кнопці "каталог"
+	// кнопка каталогу
 	if (catalogButton) {
 		catalogButton.addEventListener('click', closeMenuKeepScroll)
 	}
 
-	// закриття по кліку на оверлей
+	// клік по оверлею
 	overlay.addEventListener('click', e => {
 		if (e.target === overlay) {
 			closeMenu()
 		}
+	})
+
+	// 🔥 ЗАКРИТТЯ ПО КЛІКУ НА ПОСИЛАННЯ / КНОПКИ В МЕНЮ
+	overlay.addEventListener('click', e => {
+		const target = e.target.closest('a, button')
+		if (!target) return
+
+		// винятки (не закривати)
+		if (
+			target.closest('.header__switch-burger') ||
+			target.closest('.mobile-menu__btn-catalog') ||
+			target.closest('.mobile-menu__close')
+		) {
+			return
+		}
+
+		closeMenu()
 	})
 }

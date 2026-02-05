@@ -4,6 +4,10 @@
 	overflow: hidden;
 }
 
+.hidden {
+	display: none;
+}
+
 .breadcrumbs {
 	@include flex(row, flex-start, center, 8px);
 	flex-wrap: wrap;

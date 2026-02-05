@@ -459,6 +459,18 @@
 		@include box(100%, 3px);
 		background-color: $accent;
 	}
+
+	&__nav-sub-list {
+		@include flex(column, flex-start, flex-start);
+		margin-left: 16px;
+	}
+
+	&__nav-sub-item {
+		@include flex(row, flex-start, center, 16px);
+		padding: 8px 16px;
+		color: $grey;
+		@include text-style(14px, 400, 140%);
+	}
 }
 
 .cart-overlay {

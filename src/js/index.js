@@ -2,6 +2,7 @@ import { initArticlesSwiper } from './modules/initArticlesSwiper'
 import { initCart } from './modules/initCart'
 import { initCatalogAccordion } from './modules/initCatalogAccordion'
 import { initCatalogToggle } from './modules/initCatalogToggle'
+import { initContactsMapSwitcher } from './modules/initContactsMapSwitcher.js'
 import { initCopyPaymentValues } from './modules/initCopyPaymentValues.js'
 import { initCustomSelects } from './modules/initCustomSelects'
 import { initFilters } from './modules/initFilters'
@@ -15,6 +16,7 @@ import { initProductAccordion } from './modules/initProductAccordion'
 import { initProductCounter } from './modules/initProductCounter'
 import { initProductSwiper } from './modules/initProductSwiper'
 import { initProductsSwiper } from './modules/initProductsSwiper'
+import { initProfileTabs } from './modules/initProfileTabs.js'
 import { initQuantityCounters } from './modules/initQuantityCounters'
 import { initReviewsSwiper } from './modules/initReviewsSwiper'
 
@@ -38,4 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initPopups()
 	initArticlesSwiper()
 	initCustomSelects()
+	initProfileTabs()
+	initContactsMapSwitcher()
 })

@@ -8,7 +8,7 @@
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/></script>
+		/>
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 
@@ -539,572 +539,123 @@
 	</div>
 </div>
 
-		<main>
-			<section class="hero-wrap">
-	<div class="hero-wrap__swiper swiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><img src="./img/bg-hero.png" alt="" /></div>
-			<div class="swiper-slide"><img src="./img/bg-hero.png" alt="" /></div>
-			<div class="swiper-slide"><img src="./img/bg-hero.png" alt="" /></div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="hero">
-			<h1 class="hero__title">Апарати для зварювання</h1>
-			<p class="hero__text">які підтримують новітні технології зварювання</p>
-			<button class="hero__btn catalog-open">Каталог</button>
-		</div>
-	</div>
-</section>
-<section class="categories container">
-	<div class="categories__top">
-		<h2 class="categories__title">Категорії</h2>
-		<span class="categories__line"></span>
-	</div>
-	<ul class="categories__list">
-		<li class="categories__item active">
-			<a class="categories__item-link" href="#"
-				><img class="categories__item-img" src="./img/category-1.png" alt="" />
-				<p class="categories__item-name">Зварювальне обладнання</p></a
-			>
+		<main><section class="profile container">
+	<ul class="breadcrumbs">
+		<li class="breadcrumbs__item">
+			<a href="#">Головна</a>
 		</li>
-		<li class="categories__item">
-			<a class="categories__item-link" href="#"
-				><img class="categories__item-img" src="./img/category-2.png" alt="" />
-				<p class="categories__item-name">Зварювальні матеріали</p></a
-			>
-		</li>
-		<li class="categories__item">
-			<a class="categories__item-link" href="#"
-				><img class="categories__item-img" src="./img/category-3.png" alt="" />
-				<p class="categories__item-name">Засоби захисту</p></a
-			>
-		</li>
-		<li class="categories__item">
-			<a class="categories__item-link" href="#"
-				><img class="categories__item-img" src="./img/category-4.png" alt="" />
-				<p class="categories__item-name">Плазмове різання</p></a
-			>
-		</li>
-		<li class="categories__item">
-			<a class="categories__item-link" href="#"
-				><img class="categories__item-img" src="./img/category-5.png" alt="" />
-				<p class="categories__item-name">Лазерне зварювання</p></a
-			>
-		</li>
-		<li class="categories__item">
-			<a class="categories__item-link" href="#"
-				><img class="categories__item-img" src="./img/category-6.png" alt="" />
-				<p class="categories__item-name">Інструменти зварювальника</p></a
-			>
-		</li>
-		<li class="categories__item">
-			<a class="categories__item-link" href="#"
-				><img class="categories__item-img" src="./img/category-7.png" alt="" />
-				<p class="categories__item-name">Автоматичне різання</p></a
-			>
-		</li>
-		<li class="categories__item">
-			<a class="categories__item-link" href="#"
-				><img class="categories__item-img" src="./img/category-8.png" alt="" />
-				<p class="categories__item-name">Газове обладнання</p></a
-			>
+		<li class="breadcrumbs__item separator">|</li>
+		<li class="breadcrumbs__item">
+			<a href="#">Особистий кабінет </a>
 		</li>
 	</ul>
-</section>
+	<div class="profile__content">
+		<div class="profile__menu">
+			<div class="profile__menu-top">
+				<div class="profile__menu-top--user">
+					<div class="profile__menu-top--avatar">
+						<img src="./img/icon-avatar.svg" alt="" />
+					</div>
+					<div class="profile__menu-top--info">
+						<p class="profile__menu-top--name">Олег Петричук</p>
+						<p class="profile__menu-top--number">380977899988</p>
+					</div>
+				</div>
+				<button class="profile__menu-top--edit">
+					<img src="./img/icon-edit.svg" alt="" />
+				</button>
+			</div>
+			<div class="profile__menu-list">
+				<button
+					class="profile__menu-tab profile-switch active"
+					data-tab="orders"
+				>
+					<div class="profile__menu-tab--img">
+						<img src="./img/icon-order.svg" alt="" />
+					</div>
+					Замовлення
+				</button>
+				<button class="profile__menu-tab profile-switch" data-tab="settings">
+					<div class="profile__menu-tab--img">
+						<img src="./img/icon-settings.svg" alt="" />
+					</div>
+					Налаштування
+				</button>
+				<button class="profile__menu-tab">
+					<div class="profile__menu-tab--img">
+						<img src="./img/icon-logout.svg" alt="" />
+					</div>
+					Вихід
+				</button>
+			</div>
+		</div>
+		<div class="profile__block" data-tab="orders">
+			<h1 class="profile__block-title">Замовлення</h1>
+			<form class="radio-group">
+				<label class="radio">
+					<input type="radio" name="plan" value="Всі" checked />
+					<span class="radio__control"></span>
+					<span class="radio__label">Всі</span>
+				</label>
 
-			<section class="why-us-wrap">
-	<div class="container">
-		<div class="why-us">
-			<div class="why-us__left">
-				<h2 class="why-us__title">Чому ми?</h2>
-				<p class="why-us__text">
-					Ми віримо, що прогрес, якого ми досягаємо сьогодні, робить можливим
-					світ, який ми уявляємо. Наша унікальна система управління бізнесом,
-					ESAB Business Excellence (EBX), допомагає нам постійно
-					вдосконалюватися, щоб максимізувати наш вплив у всьому світі.
-				</p>
-			</div>
-			<div class="why-us__right">
-				<ul class="why-us__list">
-					<li class="why-us__item">
-						<div class="why-us__item-img">
-							<img src="./img/icon-chat.svg" alt="" />
-						</div>
-						<div class="why-us__item-info">
-							<p class="why-us__item-info--title">Підтримка</p>
-							<p class="why-us__item-info--text">
-								Наші Партнери завжди можуть отримати консультації, технічну та
-								технологічну підтримку.
-							</p>
-						</div>
-					</li>
-					<li class="why-us__item">
-						<div class="why-us__item-img">
-							<img src="./img/icon-star.svg" alt="" />
-						</div>
-						<div class="why-us__item-info">
-							<p class="why-us__item-info--title">Досвід</p>
-							<p class="why-us__item-info--text">
-								Наші Партнери завжди можуть отримати консультації, технічну та
-								технологічну підтримку.
-							</p>
-						</div>
-					</li>
-					<li class="why-us__item">
-						<div class="why-us__item-img">
-							<img src="./img/icon-credit-card.svg" alt="" />
-						</div>
-						<div class="why-us__item-info">
-							<p class="why-us__item-info--title">Кредитування</p>
-							<p class="why-us__item-info--text">
-								Ми надаємо відстрочку на тривалий термін для постійних
-								партнерів.
-							</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="products container">
-	<div class="products__top">
-		<h2 class="products__title">Новинки</h2>
-		<div class="products__navigation">
-			<button class="products__pagination-prev">
-				<img src="./img/icon-chevron-left.svg" alt="" />
-			</button>
-			<button class="products__pagination-next">
-				<img src="./img/icon-chevron-right.svg" alt="" />
-			</button>
-		</div>
-	</div>
-	<div class="products__swiper swiper">
-		<ul class="products__list swiper-wrapper">
-			<li class="products__item swiper-slide">
-				<img class="products__item-img" src="./img/new-1.png" alt="" />
-				<p class="products__item-name">
-					Зварювальний апарат CADDY ARC 151I/201I, A33
-				</p>
-				<p class="products__item-desc">
-					Зварювальне обладнання для ММА зварювання
-				</p>
-				<p class="products__item-text">
-					Зварювальні апарати серії Rebel™ мають універсальне живлення 120/230 В
-					та підтримують новітні технології зварювання.
-				</p>
-				<div class="products__item-bottom">
-					<button class="products__item-more">Детальніше</button>
-					<button class="products__item-price" data-popup-target="priceRequest">
-						Запит ціни
-					</button>
-				</div>
-			</li>
-			<li class="products__item swiper-slide">
-				<img class="products__item-img" src="./img/new-2.png" alt="" />
-				<p class="products__item-name">
-					Зварювальний апарат CADDY ARC 151I/201I, A33
-				</p>
-				<p class="products__item-desc">
-					Зварювальне обладнання для ММА зварювання
-				</p>
-				<p class="products__item-text">
-					Зварювальні апарати серії Rebel™ мають універсальне живлення 120/230 В
-					та підтримують новітні технології зварювання.
-				</p>
-				<div class="products__item-bottom">
-					<button class="products__item-more">Детальніше</button>
-					<button class="products__item-price" data-popup-target="priceRequest">
-						Запит ціни
-					</button>
-				</div>
-			</li>
-			<li class="products__item swiper-slide">
-				<img class="products__item-img" src="./img/new-3.png" alt="" />
-				<p class="products__item-name">
-					Зварювальний апарат CADDY ARC 151I/201I, A33
-				</p>
-				<p class="products__item-desc">
-					Зварювальне обладнання для ММА зварювання
-				</p>
-				<p class="products__item-text">
-					Зварювальні апарати серії Rebel™ мають універсальне живлення 120/230 В
-					та підтримують новітні технології зварювання.
-				</p>
-				<div class="products__item-bottom">
-					<button class="products__item-more">Детальніше</button>
-					<button class="products__item-price" data-popup-target="priceRequest">
-						Запит ціни
-					</button>
-				</div>
-			</li>
-			<li class="products__item swiper-slide">
-				<img class="products__item-img" src="./img/new-1.png" alt="" />
-				<p class="products__item-name">
-					Зварювальний апарат CADDY ARC 151I/201I, A33
-				</p>
-				<p class="products__item-desc">
-					Зварювальне обладнання для ММА зварювання
-				</p>
-				<p class="products__item-text">
-					Зварювальні апарати серії Rebel™ мають універсальне живлення 120/230 В
-					та підтримують новітні технології зварювання.
-				</p>
-				<div class="products__item-bottom">
-					<button class="products__item-more">Детальніше</button>
-					<button class="products__item-price" data-popup-target="priceRequest">
-						Запит ціни
-					</button>
-				</div>
-			</li>
-			<li class="products__item swiper-slide">
-				<img class="products__item-img" src="./img/new-2.png" alt="" />
-				<p class="products__item-name">
-					Зварювальний апарат CADDY ARC 151I/201I, A33
-				</p>
-				<p class="products__item-desc">
-					Зварювальне обладнання для ММА зварювання
-				</p>
-				<p class="products__item-text">
-					Зварювальні апарати серії Rebel™ мають універсальне живлення 120/230 В
-					та підтримують новітні технології зварювання.
-				</p>
-				<div class="products__item-bottom">
-					<button class="products__item-more">Детальніше</button>
-					<button class="products__item-price" data-popup-target="priceRequest">
-						Запит ціни
-					</button>
-				</div>
-			</li>
-			<li class="products__item swiper-slide">
-				<img class="products__item-img" src="./img/new-3.png" alt="" />
-				<p class="products__item-name">
-					Зварювальний апарат CADDY ARC 151I/201I, A33
-				</p>
-				<p class="products__item-desc">
-					Зварювальне обладнання для ММА зварювання
-				</p>
-				<p class="products__item-text">
-					Зварювальні апарати серії Rebel™ мають універсальне живлення 120/230 В
-					та підтримують новітні технології зварювання.
-				</p>
-				<div class="products__item-bottom">
-					<button class="products__item-more">Детальніше</button>
-					<button class="products__item-price" data-popup-target="priceRequest">
-						Запит ціни
-					</button>
-				</div>
-			</li>
-		</ul>
-	</div>
-</section>
+				<label class="radio">
+					<input type="radio" name="plan" value="Виконані" />
+					<span class="radio__control"></span>
+					<span class="radio__label">Виконані</span>
+				</label>
 
-			<section class="partners-wrap">
-	<div class="container">
-		<h2 class="partners__title">Наші партнери</h2>
-		<div class="partners">
-			<div class="partners__track">
-				<ul class="partners__list">
-					<li class="partners__item">
-						<img src="./img/partner-1.svg" alt="" />
-					</li>
-					<li class="partners__item">
-						<img src="./img/partner-2.svg" alt="" />
-					</li>
-					<li class="partners__item">
-						<img src="./img/partner-3.svg" alt="" />
-					</li>
-					<li class="partners__item">
-						<img src="./img/partner-4.svg" alt="" />
-					</li>
-				</ul>
-				<ul class="partners__list is-duplicate">
-					<li class="partners__item">
-						<img src="./img/partner-1.svg" alt="" />
-					</li>
-					<li class="partners__item">
-						<img src="./img/partner-2.svg" alt="" />
-					</li>
-					<li class="partners__item">
-						<img src="./img/partner-3.svg" alt="" />
-					</li>
-					<li class="partners__item">
-						<img src="./img/partner-4.svg" alt="" />
-					</li>
-				</ul>
+				<label class="radio">
+					<input type="radio" name="plan" value="Скасовані" />
+					<span class="radio__control"></span>
+					<span class="radio__label">Скасовані</span>
+				</label>
+			</form>
+			<ul class="profile__block-list">
+				<li class="profile__block-item">
+					<div class="profile__block-item--top">
+						<div class="profile__block-item--info">
+							<p class="profile__block-item--number">№8475876574857</p>
+							<p class="profile__block-item--date">10 квітня 2025</p>
+						</div>
+						<p class="profile__block-item--status">Виконане</p>
+					</div>
+					<div class="profile__block-item--bottom">
+						<div class="profile__block-item--product">
+							<div class="profile__block-item--img">
+								<img src="./img/new-1.png" alt="" />
+							</div>
+							<div class="profile__block-item--desc">
+								<p class="profile__block-item--name">
+									Зварювальний напівавтомат WARRIOR 400iCC/CV
+								</p>
+								<p class="profile__block-item--article">Артикул</p>
+							</div>
+						</div>
+						<p class="profile__block-item--calc">1шт</p>
+					</div>
+					<button class="profile__block-item--btn">Повторити замовлення</button>
+				</li>
+			</ul>
+		</div>
+		<div class="profile__block hidden" data-tab="settings">
+			<h1 class="profile__block-title">Налаштування</h1>
+			<div class="profile__block-password">
+				<h2 class="profile__block-pre-title">Змінити пароль</h2>
+				<div class="profile__block-form">
+					<div class="input">
+						<label>Старий пароль</label>
+						<input type="text" placeholder="Введіть старий пароль" />
+					</div>
+					<div class="input">
+						<label>Новий пароль</label>
+						<input type="text" placeholder="Введіть новий пароль" />
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="reviews container">
-	<div class="reviews__top">
-		<h2 class="reviews__title">Відгуки</h2>
-		<div class="reviews__navigation">
-			<button class="reviews__pagination-prev">
-				<img src="./img/icon-chevron-left.svg" alt="" />
-			</button>
-			<button class="reviews__pagination-next">
-				<img src="./img/icon-chevron-right.svg" alt="" />
-			</button>
-		</div>
-	</div>
-	<div class="reviews__swiper swiper">
-		<ul class="reviews__list swiper-wrapper">
-			<li class="reviews__item swiper-slide">
-				<div class="reviews__item-rate">
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-				</div>
-				<div class="reviews__item-quote">
-					<img src="./img/icon-quotes.svg" alt="" />
-					<p>Дуже задоволений покупкою.</p>
-				</div>
-				<p class="reviews__item-text">
-					Дуже задоволений покупкою. Замовляв зварювальний інвертор — якість на
-					відмінно, швидка доставка та приємна консультація. Рекомендую магазин.
-				</p>
-				<div class="reviews__item-bottom">
-					<p class="reviews__item-name">Григорій</p>
-					<p class="reviews__item-date">12.07.2025</p>
-				</div>
-			</li>
-			<li class="reviews__item swiper-slide">
-				<div class="reviews__item-rate">
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-				</div>
-				<div class="reviews__item-quote">
-					<img src="./img/icon-quotes.svg" alt="" />
-					<p>Замовлення обробили швидко</p>
-				</div>
-				<p class="reviews__item-text">
-					Купував у цьому магазині одразу кілька позицій: інвертор, електроди та
-					кабелі. Спочатку сумнівався, бо не мав досвіду онлайн-замовлень такого
-					обладнання, але менеджери дуже професійно проконсультували, допомогли
-					підібрати оптимальні варіанти під мій бюджет і тип робіт. Замовлення
-					обробили швидко, відправили в день оплати. Якість техніки повністю
-					відповідає опису, усе працює стабільно навіть під навантаженням.
-				</p>
-				<div class="reviews__item-bottom">
-					<p class="reviews__item-name">Григорій</p>
-					<p class="reviews__item-date">24.06.2025</p>
-				</div>
-			</li>
-			<li class="reviews__item swiper-slide">
-				<div class="reviews__item-rate">
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-				</div>
-				<div class="reviews__item-quote">
-					<img src="./img/icon-quotes.svg" alt="" />
-					<p>“Гарний сервіс і відповідальний підхід до клієнта.</p>
-				</div>
-				<p class="reviews__item-text">
-					Замовляв генератор і маску для зварювання. Сподобалося, що на сайті є
-					детальний опис і характеристики, а менеджер додатково проконсультував
-					і підказав, яка модель буде найнадійнішою. Ціни приємні, є гарантія та
-					чек. Доставка прийшла швидко, усе запаковано акуратно. Вже місяць
-					користуюся — техніка працює без нарікань. Гарний сервіс і
-					відповідальний підхід до клієнта.
-				</p>
-				<div class="reviews__item-bottom">
-					<p class="reviews__item-name">Григорій</p>
-					<p class="reviews__item-date">11.06.2025</p>
-				</div>
-			</li>
-			<li class="reviews__item swiper-slide">
-				<div class="reviews__item-rate">
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-				</div>
-				<div class="reviews__item-quote">
-					<img src="./img/icon-quotes.svg" alt="" />
-					<p>Працює стабільно, претензій немає.</p>
-				</div>
-				<p class="reviews__item-text">
-					Купував у цьому інтернет-магазині апарат для напівавтоматичного
-					зварювання. Допомогли підібрати модель під мої задачі, усе пояснили
-					простою мовою. Замовлення відправили в той же день, упаковка міцна,
-					товар прийшов без пошкоджень. Працює стабільно, претензій немає.
-				</p>
-				<div class="reviews__item-bottom">
-					<p class="reviews__item-name">Григорій</p>
-					<p class="reviews__item-date">29.05.2025</p>
-				</div>
-			</li>
-			<li class="reviews__item swiper-slide">
-				<div class="reviews__item-rate">
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-					<img
-						class="reviews__item-rate--star"
-						src="./img/icon-star-review.svg"
-						alt=""
-					/>
-				</div>
-				<div class="reviews__item-quote">
-					<img src="./img/icon-quotes.svg" alt="" />
-					<p>Дуже задоволений покупкою.</p>
-				</div>
-				<p class="reviews__item-text">
-					Дуже задоволений покупкою. Замовляв зварювальний інвертор — якість на
-					відмінно, швидка доставка та приємна консультація. Рекомендую магазин.
-				</p>
-				<div class="reviews__item-bottom">
-					<p class="reviews__item-name">Григорій</p>
-					<p class="reviews__item-date">12.07.2025</p>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<button class="reviews__btn" data-popup-target="feedback">
-		Залишити відгук
-	</button>
-</section>
-<section class="updates">
-	<img class="updates__left" src="./img/updates.png" alt="" />
-	<div class="updates__right">
-		<h2 class="updates__title">Слідкуйте за оновленнями!</h2>
-		<p class="updates__text">
-			Підпишіться на наші інформаційні листий першими дізнавайтесь про акційні
-			пропозиції
-		</p>
-		<form class="updates__form">
-			<div class="updates__form-row">
-				<div class="input">
-					<label>Імʼя</label>
-					<input type="text" placeholder="Імʼя" />
-				</div>
-				<div class="input">
-					<label>Email</label>
-					<input type="email" placeholder="example@email.com" />
-				</div>
-			</div>
-			<label class="custom-checkbox">
-				<input type="checkbox" name="newsletter" />
-				<span class="checkmark"></span>
-				<span class="checkbox-text">
-					Я погоджуюсь на отримання інформаційних бюлетенів і пропозицій від
-					INWELD
-				</span>
-			</label>
-			<button class="updates__form-btn" type="submit">Підписатись</button>
-		</form>
-	</div>
-</section>
-
-		</main>
+</main>
 		<footer class="footer-wrap">
 	<div class="container">
 		<div class="footer">

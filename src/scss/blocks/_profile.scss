@@ -1,0 +1,239 @@
+@use '../abstracts' as *;
+
+.profile {
+	padding: 40px 102px 120px 102px;
+	@media (max-width: 1024px) {
+		padding: 16px 20px 80px 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 24px 16px 80px 16px;
+	}
+	&__content {
+		@include flex(row, flex-start, flex-start, 24px);
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			gap: 16px;
+		}
+	}
+
+	&__menu {
+		max-width: 501px;
+		width: 100%;
+		flex-shrink: 0;
+		@media (max-width: 1280px) {
+			max-width: 350px;
+		}
+		@media (max-width: 1024px) {
+			max-width: 100%;
+		}
+	}
+
+	&__menu-top {
+		@include flex(row, space-between, center);
+		padding: 15px;
+		border-radius: 8px;
+		border: 1px solid #f2f2f2;
+		background: $white;
+		margin-bottom: 40px;
+		@media (max-width: 1024px) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__menu-top--user {
+		@include flex(row, flex-start, center, 20px);
+	}
+
+	&__menu-top--avatar {
+		@include center;
+		@include box(57px, 57px, 83px);
+		background: $accent;
+	}
+
+	&__menu-top--info {
+		@include flex(column, center, flex-start, 8px);
+	}
+
+	&__menu-top--name {
+		color: $text;
+		@include text-style(20px, 500, normal);
+		letter-spacing: -0.312px;
+	}
+
+	&__menu-top--number {
+		color: $grey;
+		@include text-style(18px, 300, 140%);
+	}
+
+	&__menu-top--edit {
+		@include center;
+		@include box(45px, 45px, 83px);
+		background: rgba(203, 203, 203, 0.5);
+	}
+
+	&__menu-list {
+		@include flex(column, flex-start, flex-start, 10px);
+		padding: 15px 0;
+		border-radius: 8px;
+		border: 1px solid #f2f2f2;
+		background: $white;
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+
+	&__menu-tab {
+		width: 100%;
+		@include flex(row, flex-start, center, 16px);
+		padding: 8px 16px;
+		color: $grey;
+		@include text-style(18px, 400, 140%);
+		&:hover {
+			color: $text;
+			background: $accent;
+		}
+		&.active {
+			color: $text;
+			background: $accent;
+		}
+	}
+
+	&__menu-tab--img {
+		@include center;
+		@include box(45px, 45px, 83px);
+		background: $accent;
+	}
+
+	&__block {
+		width: 100%;
+	}
+
+	&__block-title {
+		color: $text;
+		@include text-style(40px, 500, normal);
+		letter-spacing: -0.312px;
+		margin-bottom: 16px;
+		@media (max-width: 767px) {
+			@include text-style(32px, 500, normal);
+		}
+	}
+
+	.radio-group {
+		@include flex(row, flex-start, flex-start, 16px);
+		margin-bottom: 50px;
+		@media (max-width: 1024px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__block-list {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 24px);
+	}
+
+	&__block-item {
+		width: 100%;
+	}
+
+	&__block-item--top {
+		width: 100%;
+		@include flex(row, space-between, center);
+		margin-bottom: 55px;
+		@media (max-width: 767px) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__block-item--info {
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__block-item--number {
+		color: $text;
+		@include text-style(20px, 500, normal);
+		letter-spacing: -0.312px;
+	}
+
+	&__block-item--date {
+		color: $grey;
+		@include text-style(18px, 300, 140%);
+	}
+
+	&__block-item--status {
+		color: #27b11a;
+		@include text-style(18px, 300, 140%);
+	}
+
+	&__block-item--bottom {
+		width: 100%;
+		@include flex(row, space-between, center);
+		margin-bottom: 29px;
+	}
+
+	&__block-item--product {
+		@include flex(row, center, center, 6px);
+	}
+
+	&__block-item--img {
+		@include box(100px, 80px, 8px);
+		aspect-ratio: 5/4;
+		img {
+			@include box(100%);
+			object-fit: contain;
+		}
+	}
+
+	&__block-item--desc {
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__block-item--name {
+		color: $text;
+		@include text-style(20px, 500, normal);
+		letter-spacing: -0.312px;
+		@media (max-width: 767px) {
+			@include text-style(16px, 500, normal);
+		}
+	}
+
+	&__block-item--article {
+		color: $grey;
+		@include text-style(18px, 300, 140%);
+	}
+
+	&__block-item--calc {
+		color: $grey;
+		@include text-style(18px, 300, 140%);
+	}
+
+	&__block-item--btn {
+		margin-top: 29px;
+		@include center;
+		@include box(328px, auto, 8px);
+		padding: 16px;
+		color: $text;
+		@include text-style(16px, 500, normal);
+		letter-spacing: -0.312px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+		@media (max-width: 1024px) {
+			margin-top: 16px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	&__block-pre-title {
+		margin-top: 8px;
+		color: $text;
+		@include text-style(24px, 500, normal);
+		margin-bottom: 16px;
+	}
+
+	&__block-form {
+		@include flex(column, flex-start, flex-start, 24px);
+	}
+}

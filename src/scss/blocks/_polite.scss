@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.polite {
+	padding: 40px 102px 140px 102px;
+	@media (max-width: 1024px) {
+		padding: 16px 20px 120px 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 24px 16px 120px 16px;
+	}
+
+	&__content {
+		max-width: 606px;
+		width: 100%;
+		margin: auto;
+		@media (max-width: 1024px) {
+			max-width: 100%;
+		}
+		h1 {
+			color: $text;
+			@include text-style(40px, 500, normal);
+			margin-bottom: 24px;
+			@media (max-width: 767px) {
+				@include text-style(32px, 500, normal);
+			}
+		}
+
+		h4 {
+			margin-top: 24px;
+			color: $text;
+			@include text-style(24px, 500, normal);
+			margin-bottom: 8px;
+			@media (max-width: 767px) {
+				@include text-style(20px, 500, normal);
+			}
+		}
+
+		p {
+			color: $grey;
+			@include text-style(16px, 400, 140%);
+		}
+
+		ul {
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+
+		li {
+			color: $grey;
+			@include text-style(16px, 400, 140%);
+		}
+	}
+}

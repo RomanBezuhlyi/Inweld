@@ -1,0 +1,131 @@
+@use '../abstracts' as *;
+
+.contacts {
+	margin-top: 40px;
+	width: 100%;
+	@include flex(row, flex-end, center, 24px);
+	background: $bg;
+	margin-bottom: 120px;
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		gap: 0;
+		margin-top: 24px;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 80px;
+	}
+	&__left {
+		max-width: 600px;
+		width: 100%;
+		@media (max-width: 1024px) {
+			max-width: 100%;
+			padding: 24px;
+		}
+		@media (max-width: 767px) {
+			padding: 16px;
+		}
+	}
+
+	&__line {
+		display: block;
+		@include box(100%, 4px);
+		background: $accent;
+		margin-bottom: 24px;
+	}
+
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal);
+		margin-bottom: 24px;
+		@media (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+
+	&__list {
+		@include flex(column, flex-start, flex-start, 10px);
+		margin-bottom: 24px;
+	}
+
+	&__item {
+		@include flex(row, flex-start, center, 10px);
+	}
+
+	&__item-img {
+		@include center;
+		@include box(40px, 40px, 100%);
+		background: $white;
+	}
+
+	&__item-text {
+		@include flex(column, flex-start, flex-start, 6px);
+		color: $grey;
+		@include text-style(14px, 400, 100%);
+		letter-spacing: 0.2px;
+	}
+
+	&__btn {
+		width: 276px;
+		@include center;
+		padding: 18px 32px;
+		color: $text;
+		@include text-style(16px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__right {
+		position: relative;
+		@include box(50%, 465px);
+		object-fit: cover;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+		iframe {
+			@include box(100%);
+			display: none;
+		}
+		iframe.active {
+			display: block;
+		}
+	}
+
+	&__right-route {
+		position: absolute;
+		left: 16px;
+		bottom: 16px;
+		@include flex(column, center, flex-start, 16px);
+		padding: 16px;
+		border-radius: 8px;
+		background: $white;
+	}
+
+	&__right-route--title {
+		color: $text;
+		@include text-style(24px, 500, normal);
+	}
+
+	&__right-route--bottom {
+		@include flex(row, center, center, 16px);
+	}
+
+	&__right-route--city {
+		@include center;
+		padding: 18px 32px;
+		color: $text;
+		@include text-style(16px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		border: 1px solid $accent;
+		&:hover {
+			background: #ffe754;
+		}
+		&.active {
+			background: #ffe754;
+		}
+	}
+}
