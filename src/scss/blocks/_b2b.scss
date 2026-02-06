@@ -1,0 +1,163 @@
+@use '../abstracts' as *;
+
+.b2b {
+	padding: 40px 102px 120px 102px;
+	@media (max-width: 1024px) {
+		padding: 24px 20px 120px 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 16px 16px 80px 16px;
+	}
+	&__content {
+		@include flex(row, flex-start, flex-start, 24px);
+		@media (max-width: 1024px) {
+			position: relative;
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		width: 396px;
+		flex-shrink: 0;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal);
+		margin-bottom: 24px;
+		@media (max-width: 767px) {
+			font-size: 32px;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__links {
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__link {
+		color: $grey;
+		@include text-style(16px, 300, normal);
+	}
+
+	&__btn {
+		margin-top: 24px;
+		@include center;
+		padding: 18px 32px;
+		color: $text;
+		@include text-style(16px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__right {
+	}
+
+	&__img {
+		@include box(100%, 520px);
+		object-fit: cover;
+		border-radius: 16px;
+		margin-bottom: 40px;
+		@media (max-width: 1024px) {
+			@include box(352px, 224px);
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		@media (max-width: 767px) {
+			position: static;
+			width: 100%;
+		}
+	}
+
+	&__block {
+		max-width: 606px;
+		width: 100%;
+		margin-bottom: 80px;
+		@media (max-width: 1024px) {
+			max-width: 100%;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 40px;
+		}
+		h2 {
+			color: $text;
+			@include text-style(28px, 500, normal);
+			@media (max-width: 767px) {
+				font-size: 24px;
+			}
+		}
+		p {
+			margin-top: 8px;
+			color: $grey;
+			@include text-style(16px, 400, 140%);
+		}
+		ul {
+			margin-top: 16px;
+			@include flex(column, flex-start, flex-start, 16px);
+		}
+		li {
+			@include flex(row, flex-start, center, 8px);
+			color: $grey;
+			@include text-style(16px, 300, normal);
+		}
+	}
+
+	&__benefits {
+		@include flex(column, center, flex-start, 24px);
+		padding: 32px 288px 32px 24px;
+		border-radius: 16px;
+		background: $bg;
+		@media (max-width: 1024px) {
+			padding: 32px 24px 32px 24px;
+		}
+		@media (max-width: 767px) {
+			padding: 24px 16px;
+			gap: 28px;
+		}
+
+		&-title {
+			color: $text;
+			@include text-style(28px, 500, normal);
+			@media (max-width: 767px) {
+				font-size: 24px;
+			}
+		}
+
+		&-list {
+			@include flex(column, flex-start, flex-start, 24px);
+		}
+
+		&-item {
+			@include flex(row, flex-start, flex-start, 24px);
+		}
+
+		&-info {
+			@include flex(column, flex-start, flex-start, 8px);
+		}
+
+		&-img {
+			@include center;
+			@include box(48px, 48px, 100%);
+			background: $accent;
+			aspect-ratio: 1/1;
+		}
+
+		&-name {
+			color: $text;
+			@include text-style(18px, 700, normal);
+		}
+
+		&-text {
+			color: $grey;
+			@include text-style(16px, 300, normal);
+		}
+	}
+}

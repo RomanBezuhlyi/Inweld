@@ -1,0 +1,79 @@
+@use '../abstracts' as *;
+
+.request {
+	width: 100%;
+	@include flex(row, flex-end, center, 24px);
+	background: $bg;
+	margin-bottom: 100px;
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		gap: 0;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 80px;
+	}
+	&__left {
+		max-width: 600px;
+		width: 100%;
+		@media (max-width: 1024px) {
+			max-width: 100%;
+			padding: 24px;
+		}
+		@media (max-width: 767px) {
+			padding: 16px;
+		}
+	}
+
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal);
+		letter-spacing: -0.312px;
+		margin-bottom: 16px;
+		@media (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+
+	&__text {
+		color: $text;
+		@include text-style(20px, 300, normal);
+		margin-bottom: 32px;
+		@media (max-width: 767px) {
+			font-size: 16px;
+		}
+	}
+
+	&__form {
+		@include flex(column, flex-start, flex-start, 24px);
+		.custom-checkbox {
+			margin-top: 0;
+			align-items: center !important;
+		}
+	}
+
+	&__form-btn {
+		margin-top: 8px;
+		@include center;
+		width: 328px;
+		padding: 16px;
+		color: $text;
+		@include text-style(16px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__right {
+		@include box(50%, 650px);
+		object-fit: cover;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+		@media (max-width: 767px) {
+			height: 400px;
+		}
+	}
+}

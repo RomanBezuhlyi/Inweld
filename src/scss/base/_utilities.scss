@@ -259,3 +259,47 @@
 		transform: translateX(-50%) rotateX(180deg);
 	}
 }
+
+.password-field {
+	position: relative;
+	width: 100%;
+}
+
+.password-field input {
+	width: 100%;
+	padding-right: 40px;
+}
+
+.password-field button {
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.icon-eye-closed {
+	display: none;
+}
+
+button.is-visible .icon-eye-open {
+	display: none;
+}
+
+button.is-visible .icon-eye-closed {
+	display: inline;
+}
+
+.row {
+	width: 100%;
+	@include flex(row, flex-start, flex-start, 8px);
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
+	.input {
+		width: 100%;
+	}
+	input {
+		width: 100%;
+	}
+}

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IN-WELD</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<header class="header container">
+	<div class="header__left">
+		<a class="header__logo" href="#">
+			<img src="./img/logo.svg" alt="" />
+		</a>
+		<button class="header__btn-catalog catalog-open">
+			<img src="./img/icon-btn-catalog.svg" alt="" />
+			Каталог
+		</button>
+		<nav class="header__nav">
+			<a class="header__nav-item active" href="#"><span>Головна</span> </a>
+			<a class="header__nav-item" href="#"><span>Про нас</span></a>
+			<a class="header__nav-item" href="#"><span>B2B Партнерство</span></a>
+			<a class="header__nav-item" href="#"><span>Новини</span></a>
+			<a class="header__nav-item" href="#"><span>Контакти</span></a>
+		</nav>
+	</div>
+	<div class="header__center">
+		<div class="header__search">
+			<img class="header__search-icon" src="./img/icon-search.svg" alt="" />
+			<input class="header__search-input" type="text" placeholder="Пошук" />
+		</div>
+	</div>
+	<div class="header__right">
+		<button class="header__btn-cart open-cart">
+			<div class="header__btn-cart--calc">3</div>
+			<img class="header__btn-cart--icon" src="./img/icon-cart.svg" alt="" />
+		</button>
+		<button class="header__btn-user">
+			<img class="header__btn-user--icon" src="./img/icon-user.svg" alt="" />
+		</button>
+		<div class="header__switch-lang">
+			<button class="header__switch-lang-btn active">UA</button>
+			<button class="header__switch-lang-btn">EN</button>
+			<button class="header__switch-lang-btn">RU</button>
+		</div>
+		<button class="header__switch-burger">
+			<img src="./img/icon-burger.svg" alt="" />
+		</button>
+	</div>
+</header>
+
+<div class="catalog-menu-overlay">
+	<div class="catalog-menu-wrap">
+		<div class="container">
+			<div class="catalog-menu">
+				<div class="catalog-menu__category">
+					<img
+						class="catalog-menu__category-img"
+						src="./img/category-1.png"
+						alt=""
+					/>
+					<ul class="catalog-menu__category-list">
+						<li class="catalog-menu__category-item">Зварювальне обладнання</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Для MMA зварювання</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Для MIG/MAG зварювання</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Для TIG зварювання</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Подача дроту</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Зварювальні генератори</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Устаткування для автоматичного зварювання</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Устаткування для роботизованого зварювання</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Компоненти та витратні частини</a>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog-menu__category">
+					<img
+						class="catalog-menu__category-img"
+						src="./img/category-2.png"
+						alt=""
+					/>
+					<ul class="catalog-menu__category-list">
+						<li class="catalog-menu__category-item">Зварювальні матеріали</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Електроди покриті (MMA)</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Зварювальні електроди</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Дріт зварювальний</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Електроди та прутки для TIG зварювання</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Флюси для зварювання</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Припій</a>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog-menu__category">
+					<img
+						class="catalog-menu__category-img"
+						src="./img/category-3.png"
+						alt=""
+					/>
+					<ul class="catalog-menu__category-list">
+						<li class="catalog-menu__category-item">Засоби захисту</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Маски, окуляри, світлофільтри для масок</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Спецодяг зварювальника, краги</a>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog-menu__category">
+					<img
+						class="catalog-menu__category-img"
+						src="./img/category-4.png"
+						alt=""
+					/>
+					<ul class="catalog-menu__category-list">
+						<li class="catalog-menu__category-item">
+							Інструменти зварювальника
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Електродотримачі</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Клеми</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Хімія</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Аксесуари</a>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog-menu__category">
+					<img
+						class="catalog-menu__category-img"
+						src="./img/category-5.png"
+						alt=""
+					/>
+					<ul class="catalog-menu__category-list">
+						<li class="catalog-menu__category-item">Плазмове різання</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Ручне плазмове різання</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Плазмові різки</a>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog-menu__category">
+					<img
+						class="catalog-menu__category-img"
+						src="./img/category-6.png"
+						alt=""
+					/>
+					<ul class="catalog-menu__category-list">
+						<li class="catalog-menu__category-item">Автоматичне різання</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Портативні машини</a>
+						</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Консольні машини для термічного різання з ЧПУ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog-menu__category">
+					<img
+						class="catalog-menu__category-img"
+						src="./img/category-7.png"
+						alt=""
+					/>
+					<ul class="catalog-menu__category-list">
+						<li class="catalog-menu__category-item">Газове обладнання</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Редуктори</a>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog-menu__category">
+					<img
+						class="catalog-menu__category-img"
+						src="./img/category-8.png"
+						alt=""
+					/>
+					<ul class="catalog-menu__category-list">
+						<li class="catalog-menu__category-item">Лазерне зварювання</li>
+						<li class="catalog-menu__category-item">
+							<a href="#">Пункт підменю</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="catalog-mobile">
+				<div class="catalog-mobile__item">
+					<div class="catalog-mobile__item-top">
+						<p>Зварювальне обладнання</p>
+						<img src="./img/icon-big-chevron.svg" alt="" />
+					</div>
+					<div class="catalog-mobile__item-body">
+						<ul class="catalog-mobile__item-list">
+							<li class="catalog-mobile__item-item">
+								<a href="#">Для MMA зварювання</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Для MIG/MAG зварювання</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Для TIG зварювання</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Подача дроту</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Зварювальні генератори</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Устаткування для автоматичного зварювання</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Устаткування для роботизованого зварювання</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Компоненти та витратні частини</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="catalog-mobile__item">
+					<div class="catalog-mobile__item-top">
+						<p>Засоби захисту</p>
+						<img src="./img/icon-big-chevron.svg" alt="" />
+					</div>
+					<div class="catalog-mobile__item-body">
+						<ul class="catalog-mobile__item-list">
+							<li class="catalog-mobile__item-item">
+								<a href="#">Маски, окуляри, світлофільтри для масок</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Спецодяг зварювальника, краги</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="catalog-mobile__item">
+					<div class="catalog-mobile__item-top">
+						<p>Зварювальні матеріали</p>
+						<img src="./img/icon-big-chevron.svg" alt="" />
+					</div>
+					<div class="catalog-mobile__item-body">
+						<ul class="catalog-mobile__item-list">
+							<li class="catalog-mobile__item-item">
+								<a href="#">Електроди покриті (MMA)</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Зварювальні електроди</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Дріт зварювальний</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Електроди та прутки для TIG зварювання</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Флюси для зварювання</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Припій</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="catalog-mobile__item">
+					<div class="catalog-mobile__item-top">
+						<p>Інструменти зварювальника</p>
+						<img src="./img/icon-big-chevron.svg" alt="" />
+					</div>
+					<div class="catalog-mobile__item-body">
+						<ul class="catalog-mobile__item-list">
+							<li class="catalog-mobile__item-item">
+								<a href="#">Електродотримачі</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Клеми</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Хімія</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Аксесуари</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="catalog-mobile__item">
+					<div class="catalog-mobile__item-top">
+						<p>Плазмове різання</p>
+						<img src="./img/icon-big-chevron.svg" alt="" />
+					</div>
+					<div class="catalog-mobile__item-body">
+						<ul class="catalog-mobile__item-list">
+							<li class="catalog-mobile__item-item">
+								<a href="#">Ручне плазмове різання</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Плазмові різки</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="catalog-mobile__item">
+					<div class="catalog-mobile__item-top">
+						<p>Автоматичне різання</p>
+						<img src="./img/icon-big-chevron.svg" alt="" />
+					</div>
+					<div class="catalog-mobile__item-body">
+						<ul class="catalog-mobile__item-list">
+							<li class="catalog-mobile__item-item">
+								<a href="#">Портативні машини</a>
+							</li>
+							<li class="catalog-mobile__item-item">
+								<a href="#">Консольні машини для термічного різання з ЧПУ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="catalog-mobile__item">
+					<div class="catalog-mobile__item-top">
+						<p>Газове обладнання</p>
+						<img src="./img/icon-big-chevron.svg" alt="" />
+					</div>
+					<div class="catalog-mobile__item-body">
+						<ul class="catalog-mobile__item-list">
+							<li class="catalog-mobile__item-item">
+								<a href="#">Редуктори</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="catalog-mobile__item">
+					<div class="catalog-mobile__item-top">
+						<p>Лазерне зварювання</p>
+						<img src="./img/icon-big-chevron.svg" alt="" />
+					</div>
+					<div class="catalog-mobile__item-body">
+						<ul class="catalog-mobile__item-list">
+							<li class="catalog-mobile__item-item">
+								<a href="#">Пункт підменю</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<button class="catalog-menu-close">
+				<img src="./img/icon-close.svg" alt="" />
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="mobile-menu-overlay">
+	<div class="mobile-menu-wrap">
+		<div class="container">
+			<div class="mobile-menu">
+				<div class="mobile-menu__top">
+					<a class="mobile-menu__logo" href="#">
+						<img src="./img/logo.svg" alt="" />
+					</a>
+					<div class="mobile-menu__top-right">
+						<div class="mobile-menu__switch-lang">
+							<button class="mobile-menu__switch-lang-btn active">UA</button>
+							<button class="mobile-menu__switch-lang-btn">EN</button>
+							<button class="mobile-menu__switch-lang-btn">RU</button>
+						</div>
+						<button class="mobile-menu__close">
+							<img src="./img/icon-close.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<button class="mobile-menu__btn-catalog catalog-open">
+					<img src="./img/icon-btn-catalog.svg" alt="" />
+					Каталог
+				</button>
+				<nav class="mobile-menu__nav">
+					<a class="mobile-menu__nav-item" href="#">Головна</a>
+					<a class="mobile-menu__nav-item" href="#">Про нас</a>
+					<a class="mobile-menu__nav-item" href="#">B2B Партнерство</a>
+					<a class="mobile-menu__nav-item" href="#">Новини</a>
+					<a class="mobile-menu__nav-item" href="#">Контакти</a>
+					<span class="mobile-menu__nav-line"></span>
+					<a class="mobile-menu__nav-item open-cart" href="#"
+						><img src="./img/icon-cart.svg" alt="" />Кошик</a
+					>
+					<a class="mobile-menu__nav-item" href="#"
+						><img src="./img/icon-user.svg" alt="" />Особистий кабінет</a
+					>
+					<!-- Ось цей блок показувати тільки залогіненим користувачам -->
+					<div class="mobile-menu__nav-sub-list">
+						<a
+							class="mobile-menu__nav-sub-item profile-switch"
+							href="#"
+							data-tab="orders"
+						>
+							<img src="./img/icon-order-mobile.svg" alt="" />Замовлення
+						</a>
+						<a
+							class="mobile-menu__nav-sub-item profile-switch"
+							href="#"
+							data-tab="settings"
+						>
+							<img src="./img/icon-settings-mobile.svg" alt="" />Налаштування
+						</a>
+						<a class="mobile-menu__nav-sub-item" href="#">
+							<img src="./img/icon-logout-mobile.svg" alt="" />Вихід
+						</a>
+					</div>
+					<!-- ======================================================== -->
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="cart-overlay">
+	<div class="cart">
+		<div class="cart__top">
+			<p>Кошик</p>
+			<button class="cart__top-close">
+				<img src="./img/icon-close.svg" alt="" />
+			</button>
+		</div>
+		<ul class="cart__list">
+			<li class="cart__item">
+				<div class="cart__item-img">
+					<img src="./img/catalog-1.png" alt="" />
+				</div>
+				<div class="cart__item-info">
+					<div class="cart__item-info--top">
+						<p class="cart__item-info--title">
+							Зварювальний напівавтомат WARRIOR 400iCC/CV
+						</p>
+						<button class="cart__item-info--close">
+							<img src="./img/icon-close.svg" alt="" />
+						</button>
+					</div>
+					<div class="cart__item-info--bottom">
+						<div class="quantity-counter" data-product-id="123">
+							<button class="decrease">−</button> <span class="count">1</span>
+							<button class="increase">+</button>
+						</div>
+						<p class="cart__item-info--price">141 377.96 ₴</p>
+					</div>
+				</div>
+			</li>
+			<li class="cart__item">
+				<div class="cart__item-img">
+					<img src="./img/catalog-1.png" alt="" />
+				</div>
+				<div class="cart__item-info">
+					<div class="cart__item-info--top">
+						<p class="cart__item-info--title">
+							Зварювальний напівавтомат WARRIOR 400iCC/CV
+						</p>
+						<button class="cart__item-info--close">
+							<img src="./img/icon-close.svg" alt="" />
+						</button>
+					</div>
+					<div class="cart__item-info--bottom">
+						<div class="quantity-counter" data-product-id="123">
+							<button class="decrease">−</button> <span class="count">1</span>
+							<button class="increase">+</button>
+						</div>
+						<p class="cart__item-info--price">141 377.96 ₴</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="cart__details">
+			<li class="cart__details-item">
+				<p>Сума</p>
+				<p>141 377.96 ₴</p>
+			</li>
+			<li class="cart__details-item">
+				<p>ПДВ</p>
+				<p>1 377.96 ₴</p>
+			</li>
+		</ul>
+		<div class="cart__total">
+			<p>Всього</p>
+			<p>284 377.96 ₴</p>
+		</div>
+		<div class="cart__btns">
+			<button class="cart__btn--call">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="16"
+					viewBox="0 0 16 16"
+					fill="none"
+				>
+					<path
+						d="M14.5833 15.8333C14.9149 15.8333 15.2328 15.7016 15.4672 15.4672C15.7016 15.2328 15.8333 14.9149 15.8333 14.5833V11.6667C15.8333 11.3351 15.7016 11.0172 15.4672 10.7828C15.2328 10.5484 14.9149 10.4167 14.5833 10.4167C13.6083 10.4167 12.65 10.2667 11.7333 9.95833C11.5142 9.88916 11.2803 9.88132 11.057 9.93568C10.8337 9.99003 10.6295 10.1045 10.4667 10.2667L9.26667 11.4667C7.19353 10.3353 5.48965 8.63147 4.35833 6.55833L5.55 5.36667C5.89167 5.04167 6.01667 4.55833 5.86667 4.09167C5.56667 3.18333 5.41667 2.225 5.41667 1.25C5.41667 0.918479 5.28497 0.600537 5.05055 0.366117C4.81613 0.131696 4.49819 0 4.16667 0H1.25C0.918479 0 0.600537 0.131696 0.366117 0.366117C0.131696 0.600537 0 0.918479 0 1.25C0 9.29167 6.54167 15.8333 14.5833 15.8333ZM1.25 0.833333H4.16667C4.27717 0.833333 4.38315 0.877232 4.46129 0.955372C4.53943 1.03351 4.58333 1.13949 4.58333 1.25C4.58333 2.31667 4.75 3.35833 5.075 4.35C5.11667 4.46667 5.10833 4.63333 4.975 4.76667L3.33333 6.4C4.70833 9.09167 6.725 11.1083 9.425 12.5L11.05 10.8583C11.1667 10.7417 11.325 10.7083 11.475 10.75C12.475 11.0833 13.5167 11.25 14.5833 11.25C14.6938 11.25 14.7998 11.2939 14.878 11.372C14.9561 11.4502 15 11.5562 15 11.6667V14.5833C15 14.6938 14.9561 14.7998 14.878 14.878C14.7998 14.9561 14.6938 15 14.5833 15C7 15 0.833333 8.83333 0.833333 1.25C0.833333 1.13949 0.877232 1.03351 0.955372 0.955372C1.03351 0.877232 1.13949 0.833333 1.25 0.833333Z"
+						fill="#222222"
+					/>
+				</svg>
+				Подзвоніть мені
+			</button>
+			<button class="cart__btn--order">Оформити замовлення</button>
+		</div>
+	</div>
+</div>
+
+		<main><section class="b2b container">
+	<ul class="breadcrumbs">
+		<li class="breadcrumbs__item">
+			<a href="#">Головна</a>
+		</li>
+		<li class="breadcrumbs__item separator">|</li>
+		<li class="breadcrumbs__item">
+			<a href="#">B2B партнерство</a>
+		</li>
+	</ul>
+	<div class="b2b__content">
+		<div class="b2b__left">
+			<h1 class="b2b__title">B2B партнерство</h1>
+			<div class="b2b__links">
+				<a class="b2b__link" href="#">Правила співпраці</a>
+				<a class="b2b__link" href="#">Переваги роботи з нами</a>
+				<a class="b2b__link" href="#">Чому ми?</a>
+			</div>
+			<button class="b2b__btn">Залишити заявку</button>
+		</div>
+		<div class="b2b__right">
+			<img class="b2b__img" src="./img/b2b.png" alt="" />
+			<div class="b2b__block">
+				<h2>B2B-напрям нашої компанії</h2>
+				<p>
+					Ми працюємо у форматі B2B-співпраці, допомагаючи бізнесу отримувати
+					надійні рішення, стабільне постачання та професійну технічну
+					підтримку. Наші клієнти — компанії, виробничі підприємства, оптові
+					дистриб’ютори, сервісні центри та корпоративні замовники, для яких
+					важливі якість, передбачуваність і довгострокове партнерство.
+				</p>
+			</div>
+			<div class="b2b__block">
+				<h2>Що ми пропонуємо бізнесу</h2>
+				<ul>
+					<li>
+						<img src="./img/icon-check.svg" alt="" />
+						Індивідуальні комерційні умови та гнучкі цінові програми
+					</li>
+					<li>
+						<img src="./img/icon-check.svg" alt="" />
+						Оптові поставки та регулярне поповнення запасів
+					</li>
+					<li>
+						<img src="./img/icon-check.svg" alt="" />
+						Персональний менеджер і супровід на всіх етапах
+					</li>
+					<li>
+						<img src="./img/icon-check.svg" alt="" />
+						Консультації та підбір рішень під специфіку вашого бізнеса
+					</li>
+					<li>
+						<img src="./img/icon-check.svg" alt="" />
+						Документальний супровід, гарантія та післяпродажна підтримка
+					</li>
+				</ul>
+			</div>
+			<div class="b2b__benefits">
+				<h2 class="b2b__benefits-title">Наші переваги</h2>
+				<ul class="b2b__benefits-list">
+					<li class="b2b__benefits-item">
+						<div class="b2b__benefits-img">
+							<img src="./img/icon-benefit-chat.svg" alt="" />
+						</div>
+						<div class="b2b__benefits-info">
+							<p class="b2b__benefits-name">Прозорі умови</p>
+							<p class="b2b__benefits-text">
+								Наші Партнери завжди можуть отримати консультації, технічну та
+								технологічну підтримку.
+							</p>
+						</div>
+					</li>
+					<li class="b2b__benefits-item">
+						<div class="b2b__benefits-img">
+							<img src="./img/icon-benefit-star.svg" alt="" />
+						</div>
+						<div class="b2b__benefits-info">
+							<p class="b2b__benefits-name">Конкурентні ціни</p>
+							<p class="b2b__benefits-text">
+								Наші Партнери завжди можуть отримати консультації, технічну та
+								технологічну підтримку.
+							</p>
+						</div>
+					</li>
+					<li class="b2b__benefits-item">
+						<div class="b2b__benefits-img">
+							<img src="./img/icon-benefit-credit.svg" alt="" />
+						</div>
+						<div class="b2b__benefits-info">
+							<p class="b2b__benefits-name">Гарантія якості</p>
+							<p class="b2b__benefits-text">
+								Ми надаємо відстрочку на тривалий термін для постійних
+								партнерів.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="request">
+	<div class="request__left">
+		<h2 class="request__title">Запросіть комерційну пропозицію</h2>
+		<p class="request__text">
+			Ми підготуємо персональні умови з урахуванням обсягів та специфіки вашого
+			бізнесу.
+		</p>
+		<form class="request__form">
+			<div class="row">
+				<div class="input">
+					<label>Імʼя</label>
+					<input type="text" placeholder="Імʼя" />
+				</div>
+				<div class="input">
+					<label>Номер телефону</label>
+					<input type="text" placeholder="+38" />
+				</div>
+			</div>
+			<div class="textarea">
+				<label>Коментар</label>
+				<textarea placeholder="Напишіть ваш коментар"></textarea>
+			</div>
+			<label class="custom-checkbox">
+				<input type="checkbox" name="newsletter" />
+				<span class="checkmark"></span>
+				<span class="checkbox-text">
+					Я погоджуюсь на отримання інформаційних бюлетенів і пропозицій від
+					INWELD
+				</span>
+			</label>
+			<button class="request__form-btn">Надіслати</button>
+		</form>
+	</div>
+	<img class="request__right" src="./img/request.png" alt="" />
+</section>
+</main>
+		<footer class="footer-wrap">
+	<div class="container">
+		<div class="footer">
+			<div class="footer__top">
+				<a class="footer__logo" href="#">
+					<img src="./img/logo.svg" alt="" />
+				</a>
+				<div class="footer__social">
+					<p class="footer__social-label">Ми в соцмережах:</p>
+					<div class="footer__social-list">
+						<a class="footer__social-item" href="#"
+							><img src="./img/icon-instagram.svg" alt=""
+						/></a>
+						<a class="footer__social-item" href="#"
+							><img src="./img/icon-facebook.svg" alt=""
+						/></a>
+						<a class="footer__social-item" href="#"
+							><img src="./img/icon-youtube.svg" alt=""
+						/></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__body">
+				<div class="footer__body-row">
+					<div class="footer__body-col">
+						<ul class="footer__body-list">
+							<li class="footer__body-item">Навігація</li>
+							<li class="footer__body-item">
+								<a href="#">Про нас</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Контакти</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">B2B Партнерство</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Новини</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__body-col">
+						<ul class="footer__body-list">
+							<li class="footer__body-item">Каталог</li>
+							<li class="footer__body-item">
+								<a href="#">Зварювальне обладнання</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Зварювальні матеріали</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Засоби захисту</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Інструменти зварювальника</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__body-col">
+						<ul class="footer__body-list">
+							<li class="footer__body-item">Каталог</li>
+							<li class="footer__body-item">
+								<a href="#">Плазмове різання</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Автоматичне різання</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Газове обладнання</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Лазерне зварювання</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__body-col">
+						<ul class="footer__body-list">
+							<li class="footer__body-item">Інформація</li>
+							<li class="footer__body-item">
+								<a href="#">Оплата і доставка</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Політика конфіденційності</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">Публічна оферта</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__body-col">
+						<ul class="footer__body-list">
+							<li class="footer__body-item">Контакти</li>
+							<li class="footer__body-item">
+								<a href="#">+380 50 697 00 92</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">+380 50 697 00 92</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#">info@inweld.com.ua</a>
+							</li>
+						</ul>
+						<ul class="footer__body-list">
+							<li class="footer__body-item">Наші адреси</li>
+							<li class="footer__body-item">
+								<a href="#">м. Дніпро, вул. Калинова, 3</a>
+							</li>
+							<li class="footer__body-item">
+								<a href="#"
+									>м. Київ, вул. Гетьмана Павла Полуботка, 52 оф. 512</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<img class="footer__body-img" src="./img/footer-img.svg" alt="" />
+			</div>
+			<div class="footer__bottom">
+				<p class="footer__bottom-desc">IN-WELD © 2016 - 2026</p>
+			</div>
+		</div>
+		<div class="footer-mobile">
+			<div class="footer-mobile__top">
+				<a class="footer-mobile__logo" href="#">
+					<img src="./img/logo.svg" alt="" />
+				</a>
+			</div>
+			<ul class="footer-mobile__body">
+				<li class="footer-mobile__item">
+					<div class="footer-mobile__item-top">
+						<p>Навігація</p>
+						<img src="./img/icon-plus.svg" alt="" />
+					</div>
+					<div class="footer-mobile__item-bottom">
+						<ul class="footer-mobile__item-list">
+							<li class="footer-mobile__item-item">
+								<a href="#">Про нас</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Контакти</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">B2B Партнерство</a>
+							</li>
+							<li class="footer-mobile__item-item"><a href="#">Новини</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="footer-mobile__item">
+					<div class="footer-mobile__item-top">
+						<p>Каталог</p>
+						<img src="./img/icon-plus.svg" alt="" />
+					</div>
+					<div class="footer-mobile__item-bottom">
+						<ul class="footer-mobile__item-list">
+							<li class="footer-mobile__item-item">
+								<a href="#">Зварювальне обладнання</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Зварювальні матеріали</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Засоби захисту</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Інструменти зварювальника</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Плазмове різання</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Автоматичне різання</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Газове обладнання</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Лазерне зварювання</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="footer-mobile__item">
+					<div class="footer-mobile__item-top">
+						<p>Інформація</p>
+						<img src="./img/icon-plus.svg" alt="" />
+					</div>
+					<div class="footer-mobile__item-bottom">
+						<ul class="footer-mobile__item-list">
+							<li class="footer-mobile__item-item">
+								<a href="#">Оплата і доставка</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Політика конфіденційності</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">Публічна оферта</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="footer-mobile__item">
+					<div class="footer-mobile__item-top">
+						<p>Контакти</p>
+						<img src="./img/icon-plus.svg" alt="" />
+					</div>
+					<div class="footer-mobile__item-bottom">
+						<ul class="footer-mobile__item-list">
+							<li class="footer-mobile__item-item">
+								<a href="#">+380 50 697 00 92</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">+380 50 697 00 92</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#">info@inweld.com.ua</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="footer-mobile__item">
+					<div class="footer-mobile__item-top">
+						<p>Наші адреси</p>
+						<img src="./img/icon-plus.svg" alt="" />
+					</div>
+					<div class="footer-mobile__item-bottom">
+						<ul class="footer-mobile__item-list">
+							<li class="footer-mobile__item-item">
+								<a href="#">м. Дніпро, вул. Калинова, 3</a>
+							</li>
+							<li class="footer-mobile__item-item">
+								<a href="#"
+									>м. Київ, вул. Гетьмана Павла Полуботка, 52 оф. 512</a
+								>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="footer-mobile__bottom">
+				<div class="footer-mobile__socials">
+					<p class="footer-mobile__socials-label">Ми в соцмережах:</p>
+					<div class="footer-mobile__socials-list">
+						<a class="footer-mobile__socials-item" href="#">
+							<img src="./img/icon-instagram.svg" alt="" />
+						</a>
+						<a class="footer-mobile__socials-item" href="#">
+							<img src="./img/icon-facebook.svg" alt="" />
+						</a>
+						<a class="footer-mobile__socials-item" href="#">
+							<img src="./img/icon-youtube.svg" alt="" />
+						</a>
+					</div>
+				</div>
+				<img class="footer-mobile__img" src="./img/footer-img.svg" alt="" />
+			</div>
+			<div class="footer-mobile__copyright">
+				<p>IN-WELD © 2016 - 2026</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Попапи -->
+<div class="popup" id="callMe">
+	<div class="popup__content">
+		<button class="popup__close">
+			<img src="./img/icon-close.svg" alt="" />
+		</button>
+		<h2>Передзвоніть мені</h2>
+		<form class="popup__form">
+			<div class="input">
+				<label>Номер телефону</label>
+				<input
+					type="text"
+					placeholder="Номер телефону"
+					data-phone-input
+					required
+				/>
+			</div>
+			<button type="submit">Відправити</button>
+		</form>
+	</div>
+</div>
+
+<div class="popup" id="priceRequest">
+	<div class="popup__content">
+		<button class="popup__close">
+			<img src="./img/icon-close.svg" alt="" />
+		</button>
+		<h2>Запит ціни</h2>
+		<form class="popup__form">
+			<div class="input">
+				<label>Імʼя</label>
+				<input type="text" placeholder="Імʼя" required />
+			</div>
+			<div class="input">
+				<label>Email</label>
+				<input type="text" placeholder="example@email.com" required />
+			</div>
+			<div class="input">
+				<label>Номер телефону</label>
+				<input
+					type="text"
+					placeholder="Номер телефону"
+					data-phone-input
+					required
+				/>
+			</div>
+			<button type="submit">Відправити</button>
+		</form>
+	</div>
+</div>
+
+<div class="popup" id="feedback">
+	<div class="popup__content">
+		<button class="popup__close">
+			<img src="./img/icon-close.svg" alt="" />
+		</button>
+		<h2>Залишити відгук</h2>
+		<form class="popup__form">
+			<div class="input">
+				<label>Імʼя</label>
+				<input type="text" placeholder="Імʼя" required />
+			</div>
+			<div class="textarea">
+				<label>Відгук</label>
+				<textarea placeholder="Відгук" required></textarea>
+			</div>
+			<button type="submit">Відправити</button>
+		</form>
+	</div>
+</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

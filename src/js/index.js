@@ -10,6 +10,7 @@ import { initFooterMobileAccordion } from './modules/initFooterMobileAccordion'
 import { initHeroSwiper } from './modules/initHeroSwiper'
 import { initMobileFilter } from './modules/initMobileFilter'
 import { initMobileMenu } from './modules/initMobileMenu'
+import { initPasswordToggles } from './modules/initPasswordToggle.js'
 import { initPhoneMask } from './modules/initPhoneMask.js'
 import { initPopups } from './modules/initPopups.js'
 import { initProductAccordion } from './modules/initProductAccordion'
@@ -19,6 +20,7 @@ import { initProductsSwiper } from './modules/initProductsSwiper'
 import { initProfileTabs } from './modules/initProfileTabs.js'
 import { initQuantityCounters } from './modules/initQuantityCounters'
 import { initReviewsSwiper } from './modules/initReviewsSwiper'
+import { initStarRating } from './modules/initStarRating.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	initProductsSwiper()
@@ -42,4 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initCustomSelects()
 	initProfileTabs()
 	initContactsMapSwitcher()
+	initStarRating()
+	initPasswordToggles()
 })
