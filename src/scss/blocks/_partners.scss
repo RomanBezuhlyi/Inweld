@@ -6,12 +6,8 @@
 	@media (max-width: 1024px) {
 		padding: 40px 0;
 	}
-	@media (max-width: 767px) {
-		padding: 40px 4px;
-	}
 	.container {
-		@media (min-width: 767px) {
-			max-width: 100%;
+		@media (max-width: 767px) {
 			padding: 0;
 		}
 	}
@@ -32,33 +28,23 @@
 		display: flex;
 		width: 200%;
 		animation: marquee-infinite 12s linear infinite;
-		@media (max-width: 767px) {
-			width: 100%;
-			animation: 0;
+		animation-play-state: running;
+		&:hover {
+			animation-play-state: paused;
 		}
 	}
 
 	&__list {
 		width: 100%;
 		@include flex(row, space-between, center);
-		@media (max-width: 767px) {
-			gap: 40px;
-			flex-wrap: wrap;
-		}
-	}
-
-	&__list.is-duplicate {
-		@media (max-width: 767px) {
-			display: none;
-		}
 	}
 
 	&__item {
 		width: 25%;
 		margin-right: 100px;
 		@media (max-width: 767px) {
-			width: 43%;
-			margin-right: 0;
+			width: 100%;
+			margin-right: 15px;
 		}
 	}
 }

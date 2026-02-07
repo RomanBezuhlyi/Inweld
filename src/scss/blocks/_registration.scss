@@ -1,0 +1,82 @@
+@use '../abstracts' as *;
+
+.registration {
+	padding: 104px 102px 120px 102px;
+	@media (max-width: 1024px) {
+		padding: 27px 20px 120px 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 35px 16px 80px 16px;
+	}
+	&__form {
+		max-width: 557px;
+		width: 100%;
+		margin: auto;
+		@include flex(column, flex-start, flex-start, 16px);
+		@media (max-width: 1024px) {
+			margin-left: 0;
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+		}
+		.input {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		color: $text;
+		@include text-style(40px, 500, normal);
+		@media (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+
+	&__text {
+		color: $text;
+		@include text-style(14px, 300, 130%);
+	}
+
+	&__btn {
+		@include center;
+		padding: 12px 16px;
+		color: $text;
+		@include text-style(14px, 500, normal);
+		letter-spacing: -0.312px;
+		border-radius: 8px;
+		background: $accent;
+		&:hover {
+			background: #ffe754;
+		}
+	}
+
+	&__desc {
+		@include flex(row, flex-start, center, 8px);
+		color: $text;
+		@include text-style(14px, 300, 130%);
+		a {
+			color: $text;
+			@include text-style(14px, 300, 130%);
+			text-decoration-line: underline;
+			text-decoration-style: solid;
+			text-decoration-skip-ink: auto;
+			text-decoration-thickness: auto;
+			text-underline-offset: auto;
+			text-underline-position: from-font;
+		}
+	}
+
+	&__line {
+		@include box(100%, 1px);
+		background: $accent;
+	}
+
+	&__alt {
+		width: 100%;
+		@include flex(row, center, center, 16px);
+	}
+
+	&__alt-item {
+		@include center;
+	}
+}

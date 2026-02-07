@@ -26,7 +26,7 @@ export function initPopups() {
 	})
 
 	popups.forEach(popup => {
-		const closeBtn = popup.querySelector('.popup__close')
+		const closeBtn = popup.querySelector('.popup-close')
 		closeBtn?.addEventListener('click', () => closePopup(popup))
 
 		popup.addEventListener('click', e => {
